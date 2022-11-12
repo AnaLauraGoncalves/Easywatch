@@ -1,0 +1,49 @@
+@import './base.css';
+
+#app {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-weight: normal;
+}
+
+#app{
+  background: linear-gradient(0deg, rgba(0, 3, 74, 0.2), rgba(0, 3, 74, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), #294252;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+.white {
+  color: hsla(0, 0%, 100%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(0, 0%, 36%, 0.11);
+    transition: 0.4s;
+    border-radius: 5%;
+  }
+}
+
+ul
+.n-dot{
+  list-style-type: none;
+}
+
+@media (min-width: 1024px) {
+  body {
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr; 
+    padding: 0 2rem;
+  }
+}

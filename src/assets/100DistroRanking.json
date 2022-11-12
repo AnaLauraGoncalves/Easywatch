@@ -1,0 +1,1748 @@
+[
+    {
+        "name": "MX Linux",
+        "slug": "mx",
+        "link": "https://distrowatch.com/mx",
+        "about": "MX Linux, a desktop-oriented Linux distribution based on Debian's \"Stable\" branch, is a cooperative venture between the antiX and former MEPIS Linux communities. Using Xfce as the default desktop (with separate KDE Plasma and Fluxbox editions also available), it is a mid-weight operating system designed to combine an elegant and efficient desktop with simple configuration, high stability, solid performance and medium-sized footprint.",
+        "rankPosition": 1,
+        "hits": 2635,
+        "homepage": "https://mxlinux.org/",
+        "based_ons": [
+            "Debian (Stable)",
+            "antiX"
+        ],
+        "desktop_environments": [
+            "Fluxbox",
+            "KDE Plasma",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "EndeavourOS",
+        "slug": "endeavour",
+        "link": "https://distrowatch.com/endeavour",
+        "about": "EndeavourOS is a rolling release Linux distribution based on Arch Linux. The project aims to be a spiritual successor to Antergos - providing an easy setup and pre-configured desktop environment on an Arch base. EndeavourOS offers both off-line and on-line install options. The off-line installer, Calamares, uses the Xfce desktop by default. The on-line installer can install optional software components, including most popular desktop environments.",
+        "rankPosition": 2,
+        "hits": 2287,
+        "homepage": "https://endeavouros.com/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "Budgie",
+            "Cinnamon",
+            "GNOME",
+            "i3",
+            "KDE Plasma",
+            "LXQt",
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Mint",
+        "slug": "mint",
+        "link": "https://distrowatch.com/mint",
+        "about": "Linux Mint is an Ubuntu-based distribution whose goal is to provide a classic desktop experience with many convenient, custom tools and optional out-of-the-box multimedia support. It also adds a custom desktop and menus, several unique configuration tools, and a web-based package installation interface. Linux Mint is compatible with Ubuntu software repositories.",
+        "rankPosition": 3,
+        "hits": 2082,
+        "homepage": "https://linuxmint.com/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu (LTS)"
+        ],
+        "desktop_environments": [
+            "Cinnamon",
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Manjaro",
+        "slug": "manjaro",
+        "link": "https://distrowatch.com/manjaro",
+        "about": "Manjaro Linux is a fast, user-friendly, desktop-oriented operating system based on Arch Linux. Key features include intuitive installation process, automatic hardware detection, stable rolling-release model, ability to install multiple kernels, special Bash scripts for managing graphics drivers and extensive desktop configurability. Manjaro Linux offers Xfce as the core desktop options, as well as KDE, GNOME and a minimalist Net edition for more advanced users. Community-supported desktop flavours are also available.",
+        "rankPosition": 4,
+        "hits": 1433,
+        "homepage": "https://manjaro.org/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "Awesome",
+            "bspwm",
+            "Budgie",
+            "Cinnamon",
+            "GNOME",
+            "i3",
+            "KDE Plasma",
+            "LXQt",
+            "MATE",
+            "Openbox",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Pop!_OS",
+        "slug": "popos",
+        "link": "https://distrowatch.com/popos",
+        "about": "Pop!_OS is an Ubuntu-based Linux distribution featuring a custom GNOME desktop. Pop!_OS is designed to have a minimal amount of clutter on the desktop without distractions in order to allow the user to focus on work. The distribution is developed by Linux computer retailer System76.",
+        "rankPosition": 5,
+        "hits": 1215,
+        "homepage": "https://system76.com/pop",
+        "based_ons": [
+            "Ubuntu",
+            "Debian"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "Ubuntu",
+        "slug": "ubuntu",
+        "link": "https://distrowatch.com/ubuntu",
+        "about": "Ubuntu is a complete desktop Linux operating system, freely available with both community and professional support. The Ubuntu community is built on the ideas enshrined in the Ubuntu Manifesto: that software should be available free of charge, that software tools should be usable by people in their local language and despite any disabilities, and that people should have the freedom to customise and alter their software in whatever way they see fit. \"Ubuntu\" is an ancient African word, meaning \"humanity to others\". The Ubuntu distribution brings the spirit of Ubuntu to the software world.",
+        "rankPosition": 6,
+        "hits": 1192,
+        "homepage": "https://www.ubuntu.com/",
+        "based_ons": [
+            "Debian"
+        ],
+        "desktop_environments": [
+            "GNOME",
+            "Unity"
+        ]
+    },
+    {
+        "name": "Fedora",
+        "slug": "fedora",
+        "link": "https://distrowatch.com/fedora",
+        "about": "Fedora Linux (formerly Fedora, formerly Fedora Core) is a Linux distribution developed by the community-supported Fedora Project and owned by Red Hat. Fedora Linux contains software distributed under a free and open-source license and aims to be on the leading edge of such technologies. Fedora has a reputation for focusing on innovation, integrating new technologies early on and working closely with upstream Linux communities. The default desktop in Fedora Linux is the GNOME desktop environment and the default interface is the GNOME Shell. Other desktop environments, including KDE, Xfce, LXDE, MATE and Cinnamon, are available. The Fedora project also distributes custom variations of Fedora called Fedora spins. These are built with specific sets of software packages, offering alternative desktop environments or targeting specific interests such as gaming, security, design, scientific computing and robotics.",
+        "rankPosition": 7,
+        "hits": 1168,
+        "homepage": "https://getfedora.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Awesome",
+            "Cinnamon",
+            "Enlightenment",
+            "i3",
+            "GNOME",
+            "KDE Plasma",
+            "LXDE",
+            "LXQt",
+            "MATE",
+            "Openbox",
+            "Pantheon",
+            "Ratpoison",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Debian",
+        "slug": "debian",
+        "link": "https://distrowatch.com/debian",
+        "about": "The Debian Project is an association of individuals who have made common cause to create a free operating system. This operating system is called Debian. Debian systems currently use the Linux kernel. Linux is a completely free piece of software started by Linus Torvalds and supported by thousands of programmers worldwide. Of course, the thing that people want is application software: programs to help them get what they want to do done, from editing documents to running a business to playing games to writing more software. Debian comes with over 50,000 packages (precompiled software that is bundled up in a nice format for easy installation on your machine) - all of it free. It's a bit like a tower. At the base is the kernel. On top of that are all the basic tools. Next is all the software that you run on the computer. At the top of the tower is Debian -- carefully organizing and fitting everything so it all works together.",
+        "rankPosition": 8,
+        "hits": 995,
+        "homepage": "https://www.debian.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "AfterStep",
+            "Awesome",
+            "Blackbox",
+            "Cinnamon",
+            "Fluxbox",
+            "flwm",
+            "FVWM",
+            "GNOME",
+            "i3",
+            "IceWM",
+            "ion",
+            "JWM",
+            "KDE",
+            "LXDE",
+            "LXQt",
+            "MATE",
+            "Openbox",
+            "pekwm",
+            "Ratpoison",
+            "WMaker",
+            "XBMC",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Garuda",
+        "slug": "garuda",
+        "link": "https://distrowatch.com/garuda",
+        "about": "Garuda Linux is a rolling distribution based on the Arch Linux operating system. Unlike Arch Linux, Garuda Linux comes with a graphical installer (Calamares) for easy installation, and other advanced graphical tools for managing your system. Garuda is a performance-oriented distro with many performance enhancing tweaks. Some of the many tweaks include using zram, a performance CPU governor, along with custom memory management software. Garuda Linux has striven to provide system stability by including the Timeshift backup utility.",
+        "rankPosition": 9,
+        "hits": 835,
+        "homepage": "https://garudalinux.org/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "bspwm",
+            "Cinnamon",
+            "GNOME",
+            "i3",
+            "KDE Plasma",
+            "LXQt",
+            "MATE",
+            "Recbox",
+            "UKUI",
+            "Wayfire",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Lite",
+        "slug": "lite",
+        "link": "https://distrowatch.com/lite",
+        "about": "Linux Lite is a beginner-friendly Linux distribution based on Ubuntu's long-term support (LTS) release and featuring the Xfce desktop. Linux Lite primarily targets Windows users. It aims to provide a complete set of applications to assist users with their everyday computing needs, including a full office suite, media players and other essential daily software.",
+        "rankPosition": 10,
+        "hits": 799,
+        "homepage": "https://www.linuxliteos.com/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu (LTS)"
+        ],
+        "desktop_environments": [
+            "Xfce"
+        ]
+    },
+    {
+        "name": "openSUSE",
+        "slug": "opensuse",
+        "link": "https://distrowatch.com/opensuse",
+        "about": "The openSUSE project is a community program sponsored by SUSE Linux and other companies. Promoting the use of Linux everywhere, this program provides free, easy access to openSUSE, a complete Linux distribution. The openSUSE project has three main goals: make openSUSE the easiest Linux for anyone to obtain and the most widely used Linux distribution; leverage open source collaboration to make openSUSE the world's most usable Linux distribution and desktop environment for new and experienced Linux users; dramatically simplify and open the development and packaging processes to make openSUSE the platform of choice for Linux developers and software vendors.",
+        "rankPosition": 11,
+        "hits": 763,
+        "homepage": "http://www.opensuse.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Cinnamon",
+            "Enlightenment",
+            "GNOME",
+            "IceWM",
+            "KDE Plasma",
+            "LXDE",
+            "LXQt",
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Zorin",
+        "slug": "zorin",
+        "link": "https://distrowatch.com/zorin",
+        "about": "Zorin OS is an Ubuntu-based Linux distribution designed especially for newcomers to Linux. It has a Windows-like graphical user interface and many programs similar to those found in Windows. Zorin OS also comes with an application that lets users run many Windows programs. The distribution's ultimate goal is to provide a Linux alternative to Windows and let Windows users enjoy all the features of Linux without complications.",
+        "rankPosition": 12,
+        "hits": 674,
+        "homepage": "https://www.zorinos.com/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu (LTS)"
+        ],
+        "desktop_environments": [
+            "GNOME",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "KDE neon",
+        "slug": "kdeneon",
+        "link": "https://distrowatch.com/kdeneon",
+        "about": "KDE neon is a Ubuntu-based Linux distribution and live DVD featuring the latest KDE Plasma desktop and other KDE community software. Besides the installable DVD image, the project provides a rapidly-evolving software repository with all the latest KDE software. Two editions of the product are available - a \"User\" edition, designed for those interested in checking out the latest KDE software as it gets released, and a \"Developer's\" edition, created as a platform for testing cutting-edge KDE applications.",
+        "rankPosition": 13,
+        "hits": 606,
+        "homepage": "https://neon.kde.org/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu (LTS)"
+        ],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "elementary",
+        "slug": "elementary",
+        "link": "https://distrowatch.com/elementary",
+        "about": "elementary OS is an Ubuntu-based desktop distribution. Some of its more interesting features include a custom desktop environment called Pantheon and many custom apps including Photos, Music, Videos, Calendar, Terminal, Files, and more. It also comes with some familiar apps like the Epiphany web browser and a fork of Geary mail.",
+        "rankPosition": 14,
+        "hits": 572,
+        "homepage": "https://elementary.io/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "Pantheon"
+        ]
+    },
+    {
+        "name": "antiX",
+        "slug": "antix",
+        "link": "https://distrowatch.com/antix",
+        "about": "antiX is a fast, lightweight and easy-to-install Linux live CD distribution based on Debian's \"Stable\" branch for x86 compatible systems. antiX offers users the \"antiX Magic\" in an environment suitable for old computers. The goal of antiX is to provide a light, but fully functional and flexible free operating system for both newcomers and experienced users of Linux. It should run on most computers, ranging from 256 MB old PIII systems with pre-configured swap to the latest powerful boxes. 256 MB RAM is recommended minimum for antiX. The installer needs minimum 2.7 GB hard disk size. antiX can also be used as a fast-booting rescue CD, or run \"live\" on a USB stick, with or without persistent file storage.",
+        "rankPosition": 15,
+        "hits": 457,
+        "homepage": "https://antixlinux.com/",
+        "based_ons": [
+            "Debian"
+        ],
+        "desktop_environments": [
+            "Fluxbox",
+            "IceWM",
+            "JWM"
+        ]
+    },
+    {
+        "name": "PCLinuxOS",
+        "slug": "pclinuxos",
+        "link": "https://distrowatch.com/pclinuxos",
+        "about": "PCLinuxOS is a user-friendly Linux distribution with out-of-the-box support for many popular graphics and sound cards, as well as other peripheral devices. The bootable live DVD provides an easy-to-use graphical installer and the distribution sports a wide range of popular applications for the typical desktop user, including browser plugins and full multimedia playback. The intuitive system configuration tools include Synaptic for package management, Addlocale to add support to many languages and Mylivecd to create a customised live CD.",
+        "rankPosition": 16,
+        "hits": 437,
+        "homepage": "http://www.pclinuxos.com/",
+        "based_ons": [],
+        "desktop_environments": [
+            "KDE Plasma",
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Kali",
+        "slug": "kali",
+        "link": "https://distrowatch.com/kali",
+        "about": "Kali Linux (formerly known as BackTrack) is a Debian-based distribution with a collection of security and forensics tools. It features timely security updates, support for the ARM architecture, a choice of four popular desktop environments, and seamless upgrades to newer versions.",
+        "rankPosition": 17,
+        "hits": 424,
+        "homepage": "http://www.kali.org/",
+        "based_ons": [
+            "Debian (Testing)"
+        ],
+        "desktop_environments": [
+            "GNOME",
+            "KDE Plasma",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "AlmaLinux",
+        "slug": "alma",
+        "link": "https://distrowatch.com/alma",
+        "about": "AlmaLinux OS is an open-source, community-driven project that is built from the source code of Red Hat Enterprise Linux (RHEL). AlmaLinux is a completely binary compatible fork of RHEL 8 and it is maintained by AlmaLinux OS Foundation which is a register non-profit.",
+        "rankPosition": 18,
+        "hits": 420,
+        "homepage": "https://almalinux.org/",
+        "based_ons": [
+            "Fedora",
+            "Red Hat"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "ArcoLinux",
+        "slug": "arco",
+        "link": "https://distrowatch.com/arco",
+        "about": "ArcoLinux (previously known as ArchMerge) is a distribution based on Arch Linux. The development takes places in three branches - ArcoLinux, ArcoLinuxD and ArcoLinuxB. ArcoLinux is a full-featured distribution that ships with the Xfce desktop (as well as Openbox and i3 window managers). ArcoLinuxD is a minimal distribution that includes scripts that enable power users to install any desktop and application. ArcoLinuxB is a project that gives users the power to build custom distributions, while also developing several community editions with pre-configured desktops, such as Awesome, bspwm, Budgie, Cinnamon, Deepin, GNOME, MATE and KDE Plasma. ArcoLinux also provides various video tutorials as it places strong focus on learning and acquiring Linux skills.",
+        "rankPosition": 19,
+        "hits": 391,
+        "homepage": "https://arcolinux.info/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "Awesome",
+            "bspwm",
+            "Budgie",
+            "Cinnamon",
+            "Deepin",
+            "GNOME",
+            "i3",
+            "MATE",
+            "KDE Plasma",
+            "Openbox",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Slackware",
+        "slug": "slackware",
+        "link": "https://distrowatch.com/slackware",
+        "about": "The Official Release of Slackware Linux by Patrick Volkerding is an advanced Linux operating system, designed with the twin goals of ease of use and stability as top priorities. Including the latest popular software while retaining a sense of tradition, providing simplicity and ease of use alongside flexibility and power, Slackware brings the best of all worlds to the table. Originally developed by Linus Torvalds in 1991, the UNIX-like Linux operating system now benefits from the contributions of millions of users and developers around the world. Slackware Linux provides new and experienced users alike with a fully-featured system, equipped to serve in any capacity from desktop workstation to machine-room server. Web, ftp, and email servers are ready to go out of the box, as are a wide selection of popular desktop environments. A full range of development tools, editors, and current libraries is included for users who wish to develop or compile additional software.",
+        "rankPosition": 20,
+        "hits": 377,
+        "homepage": "http://www.slackware.com/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Blackbox",
+            "Fluxbox",
+            "FVWM",
+            "KDE",
+            "WMaker",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "SparkyLinux",
+        "slug": "sparky",
+        "link": "https://distrowatch.com/sparky",
+        "about": "SparkyLinux is a lightweight, fast and simple Linux distribution designed for both old and new computers featuring customised Enlightenment and LXDE desktops. It has been built on the \"testing\" branch of Debian GNU/Linux.",
+        "rankPosition": 21,
+        "hits": 359,
+        "homepage": "https://sparkylinux.org/",
+        "based_ons": [
+            "Debian"
+        ],
+        "desktop_environments": [
+            "Budgie",
+            "Enlightenment",
+            "JWM",
+            "KDE Plasma",
+            "LXDE",
+            "LXQt",
+            "MATE",
+            "Openbox",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "EasyOS",
+        "slug": "easyos",
+        "link": "https://distrowatch.com/easyos",
+        "about": "EasyOS is an experimental Linux distribution which uses many of the technologies and package formats pioneered by Puppy Linux. The distribution features custom container technology called Easy Containers which can run applications or the entire desktop environment in a container. Packages, desktop settings, networking and sharing resources over the network can all be controlled through graphical utilities.",
+        "rankPosition": 22,
+        "hits": 352,
+        "homepage": "https://easyos.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "JWM"
+        ]
+    },
+    {
+        "name": "FreeBSD",
+        "slug": "freebsd",
+        "link": "https://distrowatch.com/freebsd",
+        "about": "FreeBSD is a UNIX-like operating system for the i386, amd64, IA-64, arm, MIPS, powerpc, ppc64, PC-98 and UltraSPARC platforms based on U.C. Berkeley's \"4.4BSD-Lite\" release, with some \"4.4BSD-Lite2\" enhancements. It is also based indirectly on William Jolitz's port of U.C. Berkeley's \"Net/2\" to the i386, known as \"386BSD\", though very little of the 386BSD code remains. FreeBSD is used by companies, Internet Service Providers, researchers, computer professionals, students and home users all over the world in their work, education and recreation. FreeBSD comes with over 20,000 packages (pre-compiled software that is bundled for easy installation), covering a wide range of areas: from server software, databases and web servers, to desktop software, games, web browsers and business software - all free and easy to install.",
+        "rankPosition": 23,
+        "hits": 350,
+        "homepage": "https://www.freebsd.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "AfterStep",
+            "Awesome",
+            "Blackbox",
+            "Enlightenment",
+            "Fluxbox",
+            "GNOME",
+            "IceWM",
+            "KDE Plasma",
+            "LXDE",
+            "Openbox",
+            "WMaker",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Linuxfx",
+        "slug": "linuxfx",
+        "link": "https://distrowatch.com/linuxfx",
+        "about": "Linuxfx is a Brazilian Linux distribution based on Ubuntu. It ships with an intuitive Cinnamon desktop user interface designed to facilitate migration of users from Windows. It includes a video management system called Sentinela, a computer vision software with video analytics and software for access control (facial recognition and automatic number plate recognition), object detection, gender, age and mood detection. Other features of the distribution include a new personal assistant, a WX theme for desktop and system applications, and compatibility with software written for Windows (.exe and .msi) through a Wine port. Following the release of Linuxfx 10.6 the distribution became a commercial offering.",
+        "rankPosition": 24,
+        "hits": 346,
+        "homepage": "http://www.linuxfx.org/",
+        "based_ons": [
+            "Ubuntu (LTS)"
+        ],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "Kubuntu",
+        "slug": "kubuntu",
+        "link": "https://distrowatch.com/kubuntu",
+        "about": "Kubuntu is a free, user-friendly Linux distribution based on KDE's desktop software and on the Ubuntu operating system. It has a biannual release cycle. Besides providing an up-to-date version of the KDE desktop at the time of the release, the project also releases updated KDE packages throughout the lifetime of each release.",
+        "rankPosition": 25,
+        "hits": 340,
+        "homepage": "http://www.kubuntu.org/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "Puppy",
+        "slug": "puppy",
+        "link": "https://distrowatch.com/puppy",
+        "about": "Puppy Linux is yet another Linux distribution. What's different here is that Puppy is extraordinarily small, yet quite full-featured. Puppy boots into a ramdisk and, unlike live CD distributions that have to keep pulling stuff off the CD, it loads into RAM. This means that all applications start in the blink of an eye and respond to user input instantly. Puppy Linux has the ability to boot off a flash card or any USB memory device, CDROM, Zip disk or LS/120/240 Superdisk, floppy disks, internal hard drive. It can even use a multisession formatted CD-RW/DVD-RW to save everything back to the CD/DVD with no hard drive required at all.",
+        "rankPosition": 26,
+        "hits": 327,
+        "homepage": "http://www.puppylinux.com/",
+        "based_ons": [],
+        "desktop_environments": [
+            "JWM",
+            "Openbox"
+        ]
+    },
+    {
+        "name": "Peppermint",
+        "slug": "peppermint",
+        "link": "https://distrowatch.com/peppermint",
+        "about": "Peppermint OS is a Debian-based (previously a Lubuntu-based) Linux distribution that aims to be lightning fast and easy on system resources. By employing its Site Specific Browser, Peppermint integrates seamlessly with cloud and web-based applications. The distribution's other features include automatic updates, easy step-by-step installation, sleek and user-friendly interface, and increased mobility by integrating directly with cloud-based applications. The distribution once employed a hybrid LXDE/Xfce desktop environment, mixing LXDE's lxsession with Xfce's panel and application menu. Starting in 2022, Peppermint OS shifted to using the Xfce desktop, dropping the LXDE components.",
+        "rankPosition": 27,
+        "hits": 324,
+        "homepage": "http://peppermintos.com/",
+        "based_ons": [
+            "Debian (Stable)",
+            "Devuan"
+        ],
+        "desktop_environments": [
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Solus",
+        "slug": "solus",
+        "link": "https://distrowatch.com/solus",
+        "about": "Solus is a Linux distribution built from scratch. It uses a forked version of the PiSi package manager, maintained as \"eopkg\" within Solus, and a custom desktop environment called \"Budgie\", developed in-house. The Budgie desktop, which can be set to emulate the look and feel of the GNOME 2 desktop, is tightly integrated with the GNOME stack. The distribution is available for 64-bit computers only.",
+        "rankPosition": 28,
+        "hits": 321,
+        "homepage": "https://getsol.us/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Budgie",
+            "GNOME",
+            "KDE Plasma",
+            "MATE"
+        ]
+    },
+    {
+        "name": "Q4OS",
+        "slug": "q4os",
+        "link": "https://distrowatch.com/q4os",
+        "about": "Q4OS is a Debian-based desktop Linux distribution designed to offer classic-style user interface (Trinity) and simple accessories, and to serve stable APIs for complex third-party applications, such as Google Chrome, VirtualBox and development tools. The system is also very useful for virtual cloud environments due to its very low hardware requirements.",
+        "rankPosition": 29,
+        "hits": 305,
+        "homepage": "https://q4os.org/",
+        "based_ons": [
+            "Debian (Stable)"
+        ],
+        "desktop_environments": [
+            "KDE Plasma",
+            "Trinity"
+        ]
+    },
+    {
+        "name": "Alpine",
+        "slug": "alpine",
+        "link": "https://distrowatch.com/alpine",
+        "about": "Alpine Linux is a community developed operating system designed for routers, firewalls, VPNs, VoIP boxes and servers. It was designed with security in mind; it has proactive security features like PaX and SSP that prevent security holes in the software to be exploited. The C library used is musl and the base tools are all in BusyBox. Those are normally found in embedded systems and are smaller than the tools found in GNU/Linux systems.",
+        "rankPosition": 30,
+        "hits": 297,
+        "homepage": "https://www.alpinelinux.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Rocky",
+        "slug": "rocky",
+        "link": "https://distrowatch.com/rocky",
+        "about": "Rocky Linux is a community enterprise operating system designed to be 100% bug-for-bug compatible with Red Hat Enterprise Linux. It is available for the x86_64 and AArch64 processor architectures.",
+        "rankPosition": 31,
+        "hits": 290,
+        "homepage": "https://rockylinux.org/",
+        "based_ons": [
+            "Red Hat"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "Tails",
+        "slug": "tails",
+        "link": "https://distrowatch.com/tails",
+        "about": "The Amnesic Incognito Live System (Tails) is a Debian-based live DVD/USB with the goal of providing complete Internet anonymity for the user. The product ships with several Internet applications, including web browser, IRC client, mail client and instant messenger, all pre-configured with security in mind and with all traffic anonymised. To achieve this, Incognito uses the Tor network to make Internet traffic very hard to trace.",
+        "rankPosition": 32,
+        "hits": 284,
+        "homepage": "https://tails.boum.org/",
+        "based_ons": [
+            "Debian (Stable)"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "Bluestar",
+        "slug": "bluestar",
+        "link": "https://distrowatch.com/bluestar",
+        "about": "Bluestar Linux is a GNU/Linux distribution that is based on Arch Linux. The Bluestar distribution features up to date packages, a full range of desktop and multimedia software in the default installation and a live desktop DVD.",
+        "rankPosition": 33,
+        "hits": 277,
+        "homepage": "https://sourceforge.net/projects/bluestarlinux/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "NixOS",
+        "slug": "nixos",
+        "link": "https://distrowatch.com/nixos",
+        "about": "NixOS is an independently developed GNU/Linux distribution that aims to improve the state of the art in system configuration management. In NixOS, the entire operating system, including the kernel, applications, system packages and configuration files, are built by the Nix package manager. Nix stores all packages in isolation from each other; as a result there are no /bin, /sbin, /lib or /usr directories and all packages are kept in /nix/store instead. Other innovative features of NixOS include reliable upgrades, rollbacks, reproducible system configurations, source-based model with binaries, and multi-user package management. Although NixOS started as a research project, it is now a functional and usable operating system that includes hardware detection, KDE as the default desktop, and systemd for managing system services.",
+        "rankPosition": 34,
+        "hits": 269,
+        "homepage": "http://nixos.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Awesome",
+            "Enlightenment",
+            "Fluxbox",
+            "GNOME",
+            "i3",
+            "IceWM",
+            "KDE Plasma",
+            "Ratpoison",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Lubuntu",
+        "slug": "lubuntu",
+        "link": "https://distrowatch.com/lubuntu",
+        "about": "Lubuntu is a variant of Ubuntu that uses the LXQt desktop environment. (Versions prior to 18.10 shipped with the LXDE desktop.) It includes essential applications and services for daily use, including office suite, PDF reader, image editor and multimedia players. A distribution available for both 32-bit and 64-bit computers, Lubuntu is intended to be user-friendly, lightweight and energy efficient.",
+        "rankPosition": 35,
+        "hits": 267,
+        "homepage": "http://lubuntu.me/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "LXDE",
+            "LXQt"
+        ]
+    },
+    {
+        "name": "CentOS",
+        "slug": "centos",
+        "link": "https://distrowatch.com/centos",
+        "about": "CentOS as a group is a community of open source contributors and users which started in 2003 and has been sponsored by Red Hat since 2014. CentOS Linux versions up to CentOS Linux 8 are 100% compatible rebuilds of Red Hat Enterprise Linux, in full compliance with Red Hat's redistribution requirements. In 2020 it was announced CentOS Linux is being discontinued and replaced with CentOS Stream, a developer-focused distribution which acts as a middle-stream between Fedora and Red Hat Enterprise Linux.",
+        "rankPosition": 36,
+        "hits": 258,
+        "homepage": "http://www.centos.org/",
+        "based_ons": [
+            "Fedora",
+            "Red Hat"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "SmartOS",
+        "slug": "smartos",
+        "link": "https://distrowatch.com/smartos",
+        "about": "SmartOS is an open-source UNIX-like operating system based on illumos, a community fork of OpenSolaris. It features four technologies - ZFS (a combined file system and logical volume manager), DTrace (a dynamic tracing framework for troubleshooting kernel and application problems), Zones (a lightweight virtualisation solution) and KVM (a full virtualisation solution for running a variety of guest operating systems, including Linux, Windows, BSD and Plan9). SmartOS is designed to be particularly suitable for building clouds and generating appliances.",
+        "rankPosition": 37,
+        "hits": 255,
+        "homepage": "https://www.tritondatacenter.com/smartos",
+        "based_ons": [
+            "Solaris"
+        ],
+        "desktop_environments": [
+            "No Desktop"
+        ]
+    },
+    {
+        "name": "Devuan",
+        "slug": "devuan",
+        "link": "https://distrowatch.com/devuan",
+        "about": "Devuan GNU+Linux is a Linux distribution forked from Debian in 2015. The project's primary goal is to provide a variant of Debian without the complexities and dependencies of systemd, an init system and services manager originally developed by Red Hat and later adopted by most other Linux distributions. Devuan's initial beta release was made available in April 2016, together with an upgrade path from Debian 7.0 \"Wheezy\" and a possibility to switch to Devuan from Debian 8.0 \"Jessie\". The distribution adopted Xfce as its default desktop.",
+        "rankPosition": 38,
+        "hits": 248,
+        "homepage": "https://devuan.org/",
+        "based_ons": [
+            "Debian"
+        ],
+        "desktop_environments": [
+            "Cinnamon",
+            "KDE Plasma",
+            "LXQt",
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "KaOS",
+        "slug": "kaos",
+        "link": "https://distrowatch.com/kaos",
+        "about": "KaOS is a desktop Linux distribution that features the latest version of the KDE desktop environment, the Calligra office suite, and other popular software applications that use the Qt toolkit. It was inspired by Arch Linux, but the developers build their own packages which are available from in-house repositories. KaOS employs a rolling-release development model and is built exclusively for 64-bit computer systems.",
+        "rankPosition": 39,
+        "hits": 240,
+        "homepage": "http://kaosx.us/",
+        "based_ons": [],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "Kodachi",
+        "slug": "kodachi",
+        "link": "https://distrowatch.com/kodachi",
+        "about": "Linux Kodachi is a Debian-based distribution which can be run from a DVD or USB thumb drive. The distribution filters all network traffic through a VPN and the Tor network, obscuring the user's network location. The distribution attempts to clean up after itself, removing traces of its use from the computer.",
+        "rankPosition": 40,
+        "hits": 234,
+        "homepage": "https://www.digi77.com/linux-kodachi/",
+        "based_ons": [
+            "Debian",
+            "Xubuntu"
+        ],
+        "desktop_environments": [
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Xubuntu",
+        "slug": "xubuntu",
+        "link": "https://distrowatch.com/xubuntu",
+        "about": "Xubuntu is a community-developed operating system based on Ubuntu. It comes with Xfce, which is a stable, light and configurable desktop environment.",
+        "rankPosition": 41,
+        "hits": 234,
+        "homepage": "http://www.xubuntu.org/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Nitrux",
+        "slug": "nitrux",
+        "link": "https://distrowatch.com/nitrux",
+        "about": "Nitrux is a Linux distribution based on Debian's Unstable (sid) branch with additional packages pulled in from Ubuntu LTS repositories. Nitrux strives to be a distribution suitable for laptops and desktop computers. Its main desktop environment is NX Desktop, a KDE Plasma desktop enhanced with \"plasmoids\" to create a special blend of aesthetics and functionality. The project also focuses on using redistributable, portable applications using the AppImage format. Registration with an e-mail address was required to download this distribution, however public downloads have been available since mid-2020.",
+        "rankPosition": 42,
+        "hits": 224,
+        "homepage": "https://nxos.org/",
+        "based_ons": [
+            "Debian (Unstable)"
+        ],
+        "desktop_environments": [
+            "JWM",
+            "NX Desktop (KDE Plasma)"
+        ]
+    },
+    {
+        "name": "ALT",
+        "slug": "alt",
+        "link": "https://distrowatch.com/alt",
+        "about": "ALT Linux was founded in 2001 by a merge of two large Russian free software projects. By the year 2008 it became a large organization developing and deploying free software, writing documentation and technical literature, supporting users, and developing custom products. ALT Linux produces different types of distributions for various purposes. There are desktop distributions for home and office computers and for corporate servers, universal distributions that include a wide variety of development tools and documentation, certified products, distributions specialized for educational institutions, and distributions for low-powered computers. ALT Linux has its own development infrastructure and repository called Sisyphus, which provides the base for all the different editions of ALT Linux.",
+        "rankPosition": 43,
+        "hits": 214,
+        "homepage": "https://en.altlinux.org/",
+        "based_ons": [
+            "Mandrake"
+        ],
+        "desktop_environments": [
+            "AfterStep",
+            "Blackbox",
+            "Cinnamon",
+            "Enlightenment",
+            "FVWM",
+            "GNOME",
+            "IceWM",
+            "KDE",
+            "LXDE",
+            "MATE",
+            "Openbox",
+            "LXQt",
+            "WMaker",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Mabox",
+        "slug": "mabox",
+        "link": "https://distrowatch.com/mabox",
+        "about": "Mabox is a Manjaro-based rolling release distribution. Mabox Linux features the Openbox window manager as its default interface and provides a welcome screen with access to utilities which add additional software to the operating system.",
+        "rankPosition": 44,
+        "hits": 209,
+        "homepage": "https://maboxlinux.org/",
+        "based_ons": [
+            "Manjaro",
+            "Arch"
+        ],
+        "desktop_environments": [
+            "Openbox"
+        ]
+    },
+    {
+        "name": "EuroLinux",
+        "slug": "eurolinux",
+        "link": "https://distrowatch.com/eurolinux",
+        "about": "EuroLinux is an enterprise-class Linux distribution made and supported by the EuroLinux company, built mostly from code of Red Hat Enterprise Linux. The origin of the system ensures compatibility with most popular enterprise Linux distributions including Red Hat Enterprise Linux, Oracle Linux, and CentOS. While primarily geared toward server workloads, EuroLinux can also be used for desktop computing or any environment where long-term stability and support are demanded.",
+        "rankPosition": 45,
+        "hits": 207,
+        "homepage": "https://en.euro-linux.com/eurolinux/",
+        "based_ons": [
+            "Red Hat"
+        ],
+        "desktop_environments": [
+            "GNOME",
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "Gentoo",
+        "slug": "gentoo",
+        "link": "https://distrowatch.com/gentoo",
+        "about": "Gentoo Linux is a versatile and fast, completely free Linux distribution geared towards developers and network professionals. Unlike other distros, Gentoo Linux has an advanced package management system called Portage. Portage is a true ports system in the tradition of BSD ports, but is Python-based and sports a number of advanced features including dependencies, fine-grained package management, \"fake\" (OpenBSD-style) installs, safe unmerging, system profiles, virtual packages, config file management, and more.",
+        "rankPosition": 46,
+        "hits": 199,
+        "homepage": "http://www.gentoo.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "AfterStep",
+            "Awesome",
+            "Blackbox",
+            "Enlightenment",
+            "Fluxbox",
+            "GNOME",
+            "IceWM",
+            "KDE Plasma",
+            "LXDE",
+            "MATE",
+            "Openbox",
+            "WMaker",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Red Hat",
+        "slug": "redhat",
+        "link": "https://distrowatch.com/redhat",
+        "about": "Red Hat Enterprise Linux (RHEL) is a Linux distribution developed by Red Hat and targeted toward the commercial market. Red Hat Enterprise Linux is released in server editions for x86, x86_64, Itanium, PowerPC and IBM System z architectures, and desktop editions for x86 and x86_64 processors. All of Red Hat's official support and training and the Red Hat Certification Program centres around the Red Hat Enterprise Linux platform. Red Hat uses strict trademark rules to restrict free re-distribution of its officially supported versions of Red Hat Enterprise Linux, but still freely provides its source code. Third-party derivatives can be built and redistributed by stripping away non-free components.",
+        "rankPosition": 47,
+        "hits": 199,
+        "homepage": "http://www.redhat.com/",
+        "based_ons": [
+            "Fedora"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "Salix",
+        "slug": "salix",
+        "link": "https://distrowatch.com/salix",
+        "about": "Salix is a Slackware-based Linux distribution that is simple, fast, easy to use and compatible with Slackware Linux. Optimised for desktop use, Salix OS features one application per task, custom package repositories, advanced package management with dependency support, localised system administration tools and innovative artwork.",
+        "rankPosition": 48,
+        "hits": 196,
+        "homepage": "http://www.salixos.org/",
+        "based_ons": [
+            "Slackware"
+        ],
+        "desktop_environments": [
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Voyager",
+        "slug": "voyager",
+        "link": "https://distrowatch.com/voyager",
+        "about": "Voyager Live is an Xubuntu-based distribution and live DVD showcasing the Xfce desktop environment. Its features include the Avant Window Navigator or AWN (a dock-like navigation bar), Conky (a program which displays useful information on the desktop), and over 300 photographs and animations that can be used as desktop backgrounds. The project also develops several other editions of Voyager Live - a \"GE\" edition with GNOME Shell, a \"GS\" variant for Gamers, and a separately-maintained flavour based on Debian's \"stable\" branch.",
+        "rankPosition": 49,
+        "hits": 196,
+        "homepage": "https://voyagerlive.org/",
+        "based_ons": [
+            "Debian (Stable)",
+            "Xubuntu"
+        ],
+        "desktop_environments": [
+            "GNOME",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "PureOS",
+        "slug": "pureos",
+        "link": "https://distrowatch.com/pureos",
+        "about": "PureOS is a GNU/Linux distribution based on Debian. It is a desktop distribution that can be used as live media (CD or USB) or as full-featured operating systems installed on a hard disk. PureOS uses free and open source software exclusively and is endorsed by the Free Software Foundation. It ships with some privacy features enabled by default such as using DuckDuckGo as the search engine and the HTTPS Everywhere browser extension is enabled.",
+        "rankPosition": 50,
+        "hits": 193,
+        "homepage": "https://pureos.net/",
+        "based_ons": [
+            "Debian"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "Parrot",
+        "slug": "parrot",
+        "link": "https://distrowatch.com/parrot",
+        "about": "Parrot (formerly Parrot Security OS) is a Debian-based, security-oriented distribution featuring a collection of utilities designed for penetration testing, computer forensics, reverse engineering, hacking, privacy, anonymity and cryptography. The product, developed by Frozenbox, comes with MATE as the default desktop environment.",
+        "rankPosition": 51,
+        "hits": 191,
+        "homepage": "https://parrotsec.org/",
+        "based_ons": [
+            "Debian (Testing)"
+        ],
+        "desktop_environments": [
+            "KDE Plasma",
+            "MATE"
+        ]
+    },
+    {
+        "name": "Ubuntu MATE",
+        "slug": "ubuntumate",
+        "link": "https://distrowatch.com/ubuntumate",
+        "about": "Ubuntu MATE is a desktop Linux distribution which aims to bring the simplicity and elegance of the Ubuntu operating system through a classic, traditional desktop environment - the MATE desktop. MATE is the continuation of the GNOME 2 desktop environment which was used as Ubuntu's default desktop until 10.10 (when it was replaced by Unity). The project began its life as an Ubuntu \"remix\", but starting with version 15.04, it was formally accepted as an official member of the Ubuntu family of Linux distributions.",
+        "rankPosition": 52,
+        "hits": 191,
+        "homepage": "https://ubuntu-mate.org/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "MATE"
+        ]
+    },
+    {
+        "name": "Mageia",
+        "slug": "mageia",
+        "link": "https://distrowatch.com/mageia",
+        "about": "Mageia is a fork of Mandriva Linux formed in September 2010 by former employees and contributors to the popular French Linux distribution. Unlike Mandriva, which is a commercial entity, the Mageia project is a community project and a non-profit organisation whose goal is to develop a free Linux-based operating system.",
+        "rankPosition": 53,
+        "hits": 188,
+        "homepage": "https://www.mageia.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Cinnamon",
+            "GNOME",
+            "IceWM",
+            "KDE",
+            "MATE",
+            "LXDE",
+            "LXQt",
+            "Openbox",
+            "WMaker",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "deepin",
+        "slug": "deepin",
+        "link": "https://distrowatch.com/deepin",
+        "about": "deepin (formerly, Deepin, Linux Deepin, Hiweed GNU/Linux) is a Debian-based distribution (it was Ubuntu-based until version 15 released in late 2015) that aims to provide an elegant, user-friendly and reliable operating system. It does not only include the best the open source world has to offer, but it has also created its own desktop environment called DDE or Deepin Desktop Environment which is based on the Qt 5 toolkit. Deepin focuses much of its attention on intuitive design. Its home-grown applications, like Deepin Software Centre, DMusic and DPlayer are tailored to the average user. Being easy to install and use, deepin can be a good Windows alternative for office and home use.",
+        "rankPosition": 54,
+        "hits": 184,
+        "homepage": "https://deepin.org/",
+        "based_ons": [
+            "Debian"
+        ],
+        "desktop_environments": [
+            "Deepin"
+        ]
+    },
+    {
+        "name": "Qubes",
+        "slug": "qubes",
+        "link": "https://distrowatch.com/qubes",
+        "about": "Qubes OS is a security-oriented, Fedora-based desktop Linux distribution whose main concept is \"security by isolation\" by using domains implemented as lightweight Xen virtual machines. It attempts to combine two contradictory goals: how to make the isolation between domains as strong as possible, mainly due to clever architecture that minimises the amount of trusted code, and how to make this isolation as seamless and easy as possible.",
+        "rankPosition": 55,
+        "hits": 183,
+        "homepage": "http://qubes-os.org/",
+        "based_ons": [
+            "Fedora"
+        ],
+        "desktop_environments": [
+            "Xfce"
+        ]
+    },
+    {
+        "name": "LXLE",
+        "slug": "lxle",
+        "link": "https://distrowatch.com/lxle",
+        "about": "LXLE is an easy-to-use lightweight desktop Linux distribution based on Lubuntu and featuring the LXDE desktop environment. Compared to its parent, LXLE has a number of unique characteristics: it is built from Ubuntu's LTS (long-term support) releases, it covers most users' everyday needs by providing a good selection of default applications, and it adds useful modifications and tweaks to improve performance and functions.",
+        "rankPosition": 56,
+        "hits": 182,
+        "homepage": "http://www.lxle.net/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu (LTS)"
+        ],
+        "desktop_environments": [
+            "LXDE"
+        ]
+    },
+    {
+        "name": "Archcraft",
+        "slug": "archcraft",
+        "link": "https://distrowatch.com/archcraft",
+        "about": "Archcraft is a minimal Linux distribution based on Arch Linux. The project provides a graphical user interface using minimal window managers rather than full featured desktop environments. Archcraft is installed using the Calamares system installer and includes the yay package manager to facilitate fetching software from the Arch User Repository.",
+        "rankPosition": 57,
+        "hits": 178,
+        "homepage": "https://archcraft.io/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "bspwm",
+            "Openbox"
+        ]
+    },
+    {
+        "name": "Archman",
+        "slug": "archman",
+        "link": "https://distrowatch.com/archman",
+        "about": "Archman GNU/Linux is an Arch Linux-based distribution which features the Calamares system installer and a pre-configured desktop environment. Archman also features the Pamac package manager for easy installation of new software packages.",
+        "rankPosition": 58,
+        "hits": 177,
+        "homepage": "https://archman.org/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "i3",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "ReactOS",
+        "slug": "reactos",
+        "link": "https://distrowatch.com/reactos",
+        "about": "ReactOS is a free and open-source operating system based on the best design principles found in the Windows NT architecture. Written completely from scratch, ReactOS is not a Linux-based system and it shares none of the UNIX architecture. The main goal of the ReactOS project is to provide an operating system which is binary compatible with Windows. This will allow Windows applications and drivers to run as they would on a Windows system. Additionally, the look and feel of the Windows operating system is used, such that people accustomed to the familiar user interface of Windows would find using ReactOS straightforward. The ultimate goal of ReactOS is to allow people to use it as an alternative to Windows without the need to change software they are used to.",
+        "rankPosition": 59,
+        "hits": 177,
+        "homepage": "http://www.reactos.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "ReactOS Explorer"
+        ]
+    },
+    {
+        "name": "Gecko",
+        "slug": "gecko",
+        "link": "https://distrowatch.com/gecko",
+        "about": "GeckoLinux is a Linux spin based on the openSUSE distribution, with a focus on polish and out-of-the-box usability on the desktop. The distribution features many desktop editions which can be installed from live discs. Some patent encumbered open source software is included in GeckoLinux which is not available in the default installation of openSUSE. Special attention has been given to the quality of the font rendering. GeckoLinux provides two main editions, Static (which is based on openSUSE Leap) and Rolling (based on openSUSE Tumbleweed).",
+        "rankPosition": 60,
+        "hits": 175,
+        "homepage": "http://geckolinux.github.io/",
+        "based_ons": [
+            "openSUSE"
+        ],
+        "desktop_environments": [
+            "Budgie",
+            "Cinnamon",
+            "GNOME",
+            "IceWM",
+            "KDE Plasma",
+            "LXQt",
+            "MATE",
+            "Pantheon",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "GhostBSD",
+        "slug": "ghostbsd",
+        "link": "https://distrowatch.com/ghostbsd",
+        "about": "GhostBSD is a user-friendly desktop operating system based on FreeBSD. Its default desktop is MATE, but a separate community edition with Xfce is available too. It also features a selection of commonly used software, a rolling-release development model, and a bootable live image with an intuitive graphical system installer.",
+        "rankPosition": 61,
+        "hits": 175,
+        "homepage": "http://www.ghostbsd.org/",
+        "based_ons": [
+            "FreeBSD"
+        ],
+        "desktop_environments": [
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Arch",
+        "slug": "arch",
+        "link": "https://distrowatch.com/arch",
+        "about": "Arch Linux is an independently developed, x86_64-optimised Linux distribution targeted at competent Linux users. It uses 'pacman', its home-grown package manager, to provide updates to the latest software applications with full dependency tracking. Operating on a rolling release system, Arch can be installed from a CD image or via an FTP server. The default install provides a solid base that enables users to create a custom installation. In addition, the Arch Build System (ABS) provides a way to easily build new packages, modify the configuration of stock packages, and share these packages with other users via the Arch Linux user repository.",
+        "rankPosition": 62,
+        "hits": 173,
+        "homepage": "http://www.archlinux.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Cinnamon",
+            "Enlightenment",
+            "GNOME",
+            "KDE",
+            "LXDE",
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "ExTiX",
+        "slug": "extix",
+        "link": "https://distrowatch.com/extix",
+        "about": "ExTiX is a desktop Linux distribution and live DVD based on Ubuntu, offering a choice of alternative desktop environments.",
+        "rankPosition": 63,
+        "hits": 172,
+        "homepage": "https://www.extix.se/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "Budgie",
+            "Deepin",
+            "KDE Plasma",
+            "LXQt"
+        ]
+    },
+    {
+        "name": "Oracle",
+        "slug": "oracle",
+        "link": "https://distrowatch.com/oracle",
+        "about": "Oracle Linux is an enterprise-class Linux distribution supported by Oracle and built from source packages for Red Hat Enterprise Linux (RHEL). Some of the special features of Oracle Linux include a custom-build and rigorously-tested Linux kernel called \"Oracle Unbreakable Kernel\", tight integration with Oracle's hardware and software products including most database applications, and \"zero downtime patching\" - a feature that enables administrators to update the kernel without a reboot.",
+        "rankPosition": 64,
+        "hits": 170,
+        "homepage": "https://www.oracle.com/linux/",
+        "based_ons": [
+            "Red Hat"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "Absolute",
+        "slug": "absolute",
+        "link": "https://distrowatch.com/absolute",
+        "about": "Absolute Linux is a light-weight modification of Slackware Linux. It includes several utilities that make configuration and maintenance easier and it has many common desktop and Internet applications installed and configured with tight integration of menus, applications and MIME types. Absolute Linux uses IceWM and ROX for its window and file managers.",
+        "rankPosition": 65,
+        "hits": 166,
+        "homepage": "https://www.absolutelinux.org/",
+        "based_ons": [
+            "Slackware"
+        ],
+        "desktop_environments": [
+            "IceWM"
+        ]
+    },
+    {
+        "name": "Kaisen",
+        "slug": "kaisen",
+        "link": "https://distrowatch.com/kaisen",
+        "about": "Kaisen Linux is a rolling release, Debian-based desktop distribution. The project aims to be useful for IT professionals and includes a set of tools for system administration which can be used for diagnosing and dealing with faults or failures of an installed system and its components. Kaisen Linux is available in multiple desktop editions.",
+        "rankPosition": 66,
+        "hits": 163,
+        "homepage": "https://kaisenlinux.org/",
+        "based_ons": [
+            "Debian"
+        ],
+        "desktop_environments": [
+            "KDE Plasma",
+            "LXQt",
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "MakuluLinux",
+        "slug": "makulu",
+        "link": "https://distrowatch.com/makulu",
+        "about": "MakuluLinux is a rolling-release, desktop distribution based either on Ubuntu's LTS (long-term support) release or Debian's \"Testing\" branch. It includes pre-installed multimedia codecs, device drivers and software for everyday use. MakuluLinux comes in four editions: \"LinDoz\" - featuring the Cinnamon desktop with the user interface customised to resemble that of Microsoft Windows, \"Core\" - presenting a highly customised Xfce desktop environment, \"Flash\" - providing a standard Xfce desktop, and finally \"Shift\" - delivering a pre-configured GNOME desktop environment.",
+        "rankPosition": 67,
+        "hits": 163,
+        "homepage": "http://www.makululinux.com/",
+        "based_ons": [
+            "Debian (Testing)",
+            "Ubuntu (LTS)"
+        ],
+        "desktop_environments": [
+            "Cinnamon",
+            "GNOME",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Porteus",
+        "slug": "porteus",
+        "link": "https://distrowatch.com/porteus",
+        "about": "Porteus is a fast, portable and modular live CD/USB medium based on Slackware Linux. The distribution started as a community remix of Slax, another Slackware-based live CD, with KDE 3 as the default desktop for the i486 edition and a stripped-down KDE 4 as the desktop environment for the x86_64 flavour. There are now several desktop flavours of the distribution, which include editions running Cinnamon, GNOME, KDE Plasma, LXQt, MATE, and Xfce.",
+        "rankPosition": 68,
+        "hits": 163,
+        "homepage": "http://www.porteus.org/",
+        "based_ons": [
+            "Slackware"
+        ],
+        "desktop_environments": [
+            "Cinnamon",
+            "GNOME",
+            "KDE Plasma",
+            "LXDE",
+            "LXQt",
+            "MATE",
+            "Openbox",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "OpenMandriva",
+        "slug": "openmandriva",
+        "link": "https://distrowatch.com/openmandriva",
+        "about": "The OpenMandriva distribution is a full-featured Linux desktop and server, sponsored by the OpenMandriva Association. It was based on ROSA, a Russian Linux distribution project which forked Mandriva Linux in 2012, incorporating many of Mandriva's original tools and utilities and adding in-house enhancements. The goal of OpenMandriva is to facilitate the creation, improvement, promotion and distribution of free and open-source software in general, and OpenMandriva projects in particular.",
+        "rankPosition": 69,
+        "hits": 160,
+        "homepage": "https://www.openmandriva.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "Bodhi",
+        "slug": "bodhi",
+        "link": "https://distrowatch.com/bodhi",
+        "about": "Bodhi Linux is an elegant and lightweight Debian/Ubuntu-based distribution featuring Moksha, an Enlightenment-17-based desktop environment. The project takes a decidedly minimalist approach by offering modularity, high levels of customisation, and choice of themes. Bodhi releases come in several editions, including Standard (64-bit) and Legacy (32-bit) which are minimalist, only including a web browser, terminal, file manger, text editor and photo GUI applications, while the AppPack edition includes more applications and tools preinstalled. Additional software can be added with Bodhi's web-based AppCenter, Synaptic, and APT.",
+        "rankPosition": 70,
+        "hits": 157,
+        "homepage": "https://www.bodhilinux.com/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "Moksha (Enlightenment)"
+        ]
+    },
+    {
+        "name": "4MLinux",
+        "slug": "4mlinux",
+        "link": "https://distrowatch.com/4mlinux",
+        "about": "4MLinux is a miniature Linux distribution focusing on four capabilities: maintenance (as a system rescue live CD), multimedia (for playing video DVDs and other multimedia files), miniserver (using the inetd daemon), and mystery (providing several small Linux games). The distribution includes support for booting on UEFI-enabled machines.",
+        "rankPosition": 71,
+        "hits": 152,
+        "homepage": "http://4mlinux.com/",
+        "based_ons": [],
+        "desktop_environments": [
+            "JWM"
+        ]
+    },
+    {
+        "name": "RebornOS",
+        "slug": "rebornos",
+        "link": "https://distrowatch.com/rebornos",
+        "about": "RebornOS is a desktop-oriented Linux distribution based on Arch Linux. Although the RebornOS live image provides a GNOME desktop only, the installation process offers a choice to install one of the many popular desktop environments and window managers. Other interesting features of the distribution include support for Flatpak packages, optional installation of Anbox for running Android applications, a capability to rollback the system to a previous date, and graphical system configuration and maintenance tools.",
+        "rankPosition": 72,
+        "hits": 152,
+        "homepage": "https://rebornos.org/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "Emmabuntüs",
+        "slug": "emmabuntus",
+        "link": "https://distrowatch.com/emmabuntus",
+        "about": "Emmabuntüs is a desktop Linux distribution with editions based on Debian's Stable branch with the Xfce and LXQt desktop environments. It strives to be beginner-friendly and reasonably light on resources so that it can be used on older computers. It also includes many modern features, such as large number of pre-configured programs for everyday use, dockbar for launching applications, easy installation of non-free software and media codecs, and quick setup through automated scripts. The distribution supports English, French, German, Italian, Portuguese and Spanish languages.",
+        "rankPosition": 73,
+        "hits": 147,
+        "homepage": "http://emmabuntus.org/",
+        "based_ons": [
+            "Debian (Stable)"
+        ],
+        "desktop_environments": [
+            "LXQt",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "KNOPPIX",
+        "slug": "knoppix",
+        "link": "https://distrowatch.com/knoppix",
+        "about": "KNOPPIX is a bootable disc with a collection of GNU/Linux software, automatic hardware detection, and support for many graphics cards, sound cards, SCSI and USB devices and other peripherals. KNOPPIX can be used as a Linux demo, educational disc, rescue system, or adapted and used as a platform for commercial software product demos. It is not necessary to install anything on a hard disk. Due to on-the-fly decompression, the disc can have up to 10 GB of executable software installed on it.",
+        "rankPosition": 74,
+        "hits": 145,
+        "homepage": "http://knopper.net/",
+        "based_ons": [
+            "Debian"
+        ],
+        "desktop_environments": [
+            "GNOME",
+            "KDE",
+            "LXDE",
+            "Openbox"
+        ]
+    },
+    {
+        "name": "Tiny Core",
+        "slug": "tinycore",
+        "link": "https://distrowatch.com/tinycore",
+        "about": "Tiny Core Linux is a 16 MB graphical Linux desktop. It is based on a recent Linux kernel, BusyBox, Tiny X, Fltk, and Flwm. The core runs entirely in memory and boots very quickly. The user has complete control over which applications and/or additional hardware to have supported, be it for a desktop, a nettop, an appliance or server; selectable from the project's online repository.",
+        "rankPosition": 75,
+        "hits": 145,
+        "homepage": "http://www.tinycorelinux.net/",
+        "based_ons": [
+            "Damn Small"
+        ],
+        "desktop_environments": [
+            "dwm",
+            "Fluxbox",
+            "flwm",
+            "GNOME",
+            "Hackedbox",
+            "i3",
+            "IceWM",
+            "JWM",
+            "Openbox",
+            "WMFS"
+        ]
+    },
+    {
+        "name": "AV Linux",
+        "slug": "avlinux",
+        "link": "https://distrowatch.com/avlinux",
+        "about": "AV Linux is a versatile, Debian-based distribution featuring a large collection of audio and video production software. Additionally, it also includes a custom kernel with IRQ threading enabled for low-latency audio performance. AV Linux can be run directly from a live DVD or a live USB storage device, though it can also be installed on a hard disk and used as a general-purpose operating system for everyday tasks.",
+        "rankPosition": 76,
+        "hits": 143,
+        "homepage": "http://www.bandshed.net/avlinux/",
+        "based_ons": [
+            "Debian",
+            "MX Linux"
+        ],
+        "desktop_environments": [
+            "Openbox",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "OpenBSD",
+        "slug": "openbsd",
+        "link": "https://distrowatch.com/openbsd",
+        "about": "The OpenBSD project produces a free, multi-platform BSD 4.4-based UNIX-like operating system. Its efforts emphasize portability, standardisation, correctness, proactive security and integrated cryptography. The project also develops the widely-used and popular OpenSSH (OpenBSD Secure Shell) software, which provides encrypted communication sessions over a computer network using the SSH protocol.",
+        "rankPosition": 77,
+        "hits": 143,
+        "homepage": "http://www.openbsd.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "AfterStep",
+            "Awesome",
+            "Blackbox",
+            "Enlightenment",
+            "Fluxbox",
+            "GNOME",
+            "IceWM",
+            "KDE",
+            "Openbox",
+            "WMaker",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Slax",
+        "slug": "slax",
+        "link": "https://distrowatch.com/slax",
+        "about": "Slax is a minimalist desktop live CD based on Slackware Linux. It boots into a simple desktop using the Fluxbox window manager which offers a small collection of applications, including the Chromium web browser, a text editor and a calculator. Prior to version 9.x, Slax was a Slackware-based live CD featuring the KDE desktop and a wide collection of pre-installed software for daily use together with useful recovery tools for system administrators. After releasing version 11.x with a Debian base, the project returned to a Slackware base for version 15.0.0.",
+        "rankPosition": 78,
+        "hits": 143,
+        "homepage": "http://www.slax.org/",
+        "based_ons": [
+            "Debian (Stable)",
+            "Slackware"
+        ],
+        "desktop_environments": [
+            "Fluxbox"
+        ]
+    },
+    {
+        "name": "Elive",
+        "slug": "elive",
+        "link": "https://distrowatch.com/elive",
+        "about": "Elive, or Enlightenment live CD, is a Debian-based desktop Linux distribution and live CD featuring the Enlightenment window manager. Besides being pre-configured and ready for daily desktop use, it also includes \"Elpanel\" - a control centre for easy system and desktop administration.",
+        "rankPosition": 79,
+        "hits": 141,
+        "homepage": "http://www.elivecd.org/",
+        "based_ons": [
+            "Debian (Stable)"
+        ],
+        "desktop_environments": [
+            "Enlightenment"
+        ]
+    },
+    {
+        "name": "Feren",
+        "slug": "ferenos",
+        "link": "https://distrowatch.com/ferenos",
+        "about": "Feren OS is a desktop Linux distribution based on Ubuntu and featuring the KDE Plasma desktop. It ships with a tweaked Calamares system installer, a custom theme and fonts, the Vivaldi web browser, boot options for advanced users, and a Feren OS Tour application, among the many home-built features and improvements. Prior to November 2020, the distribution was based on Linux Mint and included an edition with the Cinnamon desktop.",
+        "rankPosition": 80,
+        "hits": 141,
+        "homepage": "http://ferenos.weebly.com/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "Cinnamon",
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "Ubuntu Studio",
+        "slug": "ubuntustudio",
+        "link": "https://distrowatch.com/ubuntustudio",
+        "about": "An official variant of Ubuntu, Ubuntu Studio is a Linux-based operating system for creative individuals in the areas of audio production, video production, graphics design, photography and desktop publishing. It makes professional audio accessible on Linux; it uses the JACK sound server and a kernel built with a low-latency patch. Up until version 20.10 Ubuntu Studio shipped with the Xfce desktop environment, but this was replaced by KDE Plasma in October 2020.",
+        "rankPosition": 81,
+        "hits": 141,
+        "homepage": "http://ubuntustudio.org/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "DragonFly",
+        "slug": "dragonflybsd",
+        "link": "https://distrowatch.com/dragonflybsd",
+        "about": "DragonFly is an operating system and environment designed to be the logical continuation of the FreeBSD-4.x OS series. These operating systems belong in the same class as Linux in that they are based on UNIX ideals and APIs. DragonFly is a fork in the path, so to speak, giving the BSD base an opportunity to grow in an entirely new direction from the one taken in the FreeBSD-5 series.",
+        "rankPosition": 82,
+        "hits": 135,
+        "homepage": "http://www.dragonflybsd.org/",
+        "based_ons": [
+            "FreeBSD"
+        ],
+        "desktop_environments": [
+            "Awesome",
+            "Cinnamon",
+            "Fluxbox",
+            "JWM",
+            "KDE",
+            "LXDE",
+            "MATE",
+            "Openbox",
+            "WMaker",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Robolinux",
+        "slug": "robolinux",
+        "link": "https://distrowatch.com/robolinux",
+        "about": "Robolinux is a user-friendly and intuitive operating system based on the latest long term support release of Ubuntu. One of the project's more interesting features is the availability of a pre-configured virtual machine support pack with Windows XP or Windows 7 - a VirtualBox setup which allows the user to install and run the Windows operating system seamlessly alongside Robolinux. This is an optional add-on that must be downloaded from the project's online store.",
+        "rankPosition": 83,
+        "hits": 134,
+        "homepage": "http://www.robolinux.org/",
+        "based_ons": [
+            "Ubuntu",
+            "Debian"
+        ],
+        "desktop_environments": [
+            "Cinnamon",
+            "MATE",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Snal",
+        "slug": "snal",
+        "link": "https://distrowatch.com/snal",
+        "about": "Snal Linux is a small Linux distribution based on Arch Linux. It features the i3 window manager and it includes the Firefox web browser, as well as a handful of network and filesystem utilities. It is intended to be used as a live image to troubleshoot hard disk, system and network problems.",
+        "rankPosition": 84,
+        "hits": 133,
+        "homepage": "https://snallinux.sourceforge.io/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "i3"
+        ]
+    },
+    {
+        "name": "Ubuntu Budgie",
+        "slug": "ubuntubudgie",
+        "link": "https://distrowatch.com/ubuntubudgie",
+        "about": "Ubuntu Budgie (previously budgie-remix) is an Ubuntu-based distribution featuring the Budgie desktop, originally developed by the Solus project. Written from scratch and integrating tightly with the GNOME stack, Budgie focuses on simplicity and elegance, while also offering useful features, such as the Raven notification and customisation centre.",
+        "rankPosition": 85,
+        "hits": 133,
+        "homepage": "https://ubuntubudgie.org/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "Budgie"
+        ]
+    },
+    {
+        "name": "Trisquel",
+        "slug": "trisquel",
+        "link": "https://distrowatch.com/trisquel",
+        "about": "Trisquel GNU/Linux is a 100% libre Ubuntu-based Linux distribution. Its main purpose is to provide an operating system for varied audience, including home and office users, educational institutions, multimedia workstations, etc. The project is managed by independent developers and is partially funded by donations.",
+        "rankPosition": 86,
+        "hits": 132,
+        "homepage": "http://trisquel.info/",
+        "based_ons": [
+            "Debian",
+            "Ubuntu"
+        ],
+        "desktop_environments": [
+            "KDE Plasma",
+            "LXDE",
+            "MATE"
+        ]
+    },
+    {
+        "name": "BunsenLabs",
+        "slug": "bunsenlabs",
+        "link": "https://distrowatch.com/bunsenlabs",
+        "about": "BunsenLabs Linux is a distribution offering a light-weight and easily customizable Openbox desktop. The BunsenLabs distribution is based on Debian's Stable branch and is a community continuation of the CrunchBang Linux distribution.",
+        "rankPosition": 87,
+        "hits": 127,
+        "homepage": "https://www.bunsenlabs.org/",
+        "based_ons": [
+            "Debian (Stable)"
+        ],
+        "desktop_environments": [
+            "Openbox"
+        ]
+    },
+    {
+        "name": "ROSA",
+        "slug": "rosa",
+        "link": "https://distrowatch.com/rosa",
+        "about": "ROSA is a Russian company developing a variety of Linux-based solutions. Its flagship product, ROSA Desktop, is a Linux distribution featuring a highly customised KDE desktop and a number of modifications designed to enhance the user-friendliness of the working environment. The company also develops an \"Enterprise Server\" edition of ROSA which is based on Red Hat Enterprise Linux.",
+        "rankPosition": 88,
+        "hits": 125,
+        "homepage": "https://www.rosalinux.ru/",
+        "based_ons": [
+            "Mandriva"
+        ],
+        "desktop_environments": [
+            "GNOME",
+            "KDE",
+            "KDE Plasma",
+            "LXQt",
+            "MATE"
+        ]
+    },
+    {
+        "name": "Clear",
+        "slug": "clear",
+        "link": "https://distrowatch.com/clear",
+        "about": "Clear Linux is a minimal distribution primarily designed with performance and cloud use-cases in mind. The operating system upgrades as a whole rather than using individual packages. Extra software can be added to the system (along with associated dependencies) using pre-compiled bundles which can be accessed through the distribution's swupd software manager.",
+        "rankPosition": 89,
+        "hits": 124,
+        "homepage": "https://clearlinux.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "GNOME"
+        ]
+    },
+    {
+        "name": "RasPiOS",
+        "slug": "raspios",
+        "link": "https://distrowatch.com/raspios",
+        "about": "Raspberry Pi OS (formerly Raspbian) is a free operating system based on Debian GNU/Linux and optimised for the Raspberry Pi hardware (the armhf processor architecture). Raspberry Pi OS comes with over 35,000 packages, or pre-compiled software bundled in a nice format for easy installation on a Raspberry Pi. The initial build was completed in June of 2012, but the distribution continues to be active developed with an emphasis on improving the stability and performance of as many Debian packages as possible. Although Debian produces a distribution for the arm architecture, it is compatible only with versions later than the one used on the Raspberry Pi (ARMv7-A CPUs and higher vs the Raspberry Pi's ARMv6 CPU).",
+        "rankPosition": 90,
+        "hits": 124,
+        "homepage": "https://www.raspberrypi.com/software/",
+        "based_ons": [
+            "Debian (Stable)"
+        ],
+        "desktop_environments": [
+            "LXDE"
+        ]
+    },
+    {
+        "name": "Haiku",
+        "slug": "haiku",
+        "link": "https://distrowatch.com/haiku",
+        "about": "Haiku is an open-source operating system, currently in development, that specifically targets personal computing. Inspired by the Be Operating System (BeOS), Haiku aims to become a fast, efficient, simple to use, easy to learn and yet very powerful system for computer users of all levels. The key highlights that distinguish Haiku from other operating systems include: specific focus on personal computing, custom kernel designed for responsiveness, fully threaded design for great efficiency with multi-processor/core CPUs, rich object-oriented API for faster development, database-like file system (BFS) with support for indexed metadata, and unified, cohesive interface.",
+        "rankPosition": 91,
+        "hits": 120,
+        "homepage": "https://haiku-os.org/",
+        "based_ons": [],
+        "desktop_environments": [
+            "Haiku"
+        ]
+    },
+    {
+        "name": "siduction",
+        "slug": "siduction",
+        "link": "https://distrowatch.com/siduction",
+        "about": "The siduction distribution is a desktop-oriented operating system and live medium based on the \"unstable\" branch of Debian GNU/Linux. Forked from aptosid in late 2011, siduction offers many separate live media with a range of desktop environments. The project also promises regular releases, an open development model, and friendly relationship with its developer and user community.",
+        "rankPosition": 92,
+        "hits": 118,
+        "homepage": "https://siduction.org/",
+        "based_ons": [
+            "Debian (Unstable)"
+        ],
+        "desktop_environments": [
+            "KDE Plasma",
+            "LXQt",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "JingOS",
+        "slug": "jingos",
+        "link": "https://distrowatch.com/jingos",
+        "about": "JingOS is an Ubuntu-based Linux distribution for tablet computers. It can run desktop Linux applications like VS Code and LibreOffice. The distribution strives to be able to run both GNU/Linux and Android programs.",
+        "rankPosition": 93,
+        "hits": 117,
+        "homepage": "https://jingos.com/",
+        "based_ons": [
+            "KDE neon",
+            "Ubuntu",
+            "Debian"
+        ],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "Artix",
+        "slug": "artix",
+        "link": "https://distrowatch.com/artix",
+        "about": "Artix Linux is a fork (or continuation as an autonomous project) of the Arch-OpenRC and Manjaro-OpenRC projects. Artix Linux offers a lightweight, rolling-release operating system featuring the OpenRC init software. (Alternative spins feature the runit and s6 init software.) Several editions of Artix Linux are available, featuring either a plain command line or one of several desktop environments.",
+        "rankPosition": 94,
+        "hits": 114,
+        "homepage": "https://artixlinux.org/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "Cinnamon",
+            "LXDE",
+            "LXQt",
+            "MATE",
+            "KDE Plasma",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "Endless",
+        "slug": "endless",
+        "link": "https://distrowatch.com/endless",
+        "about": "Endless OS is a Linux-based operating system which provides a simplified and streamlined user experience using a customized desktop environment forked from GNOME 3. Rather than using a traditional Linux package management system, Endless OS uses a read-only root file system managed by OSTree with application bundles overlaid on top.",
+        "rankPosition": 95,
+        "hits": 114,
+        "homepage": "https://endlessos.com/",
+        "based_ons": [
+            "Debian (Stable)"
+        ],
+        "desktop_environments": [
+            "EOS Shell (GNOME)"
+        ]
+    },
+    {
+        "name": "Neptune",
+        "slug": "neptune",
+        "link": "https://distrowatch.com/neptune",
+        "about": "Neptune is a GNU/Linux distribution for desktops. It is based on Debian's Stable branch, except for a newer kernel, some drivers and newer versions of popular applications, such as LibreOffice. It also ships with the latest version of the KDE desktop. The distribution's main goals are to provide a good-looking general-purpose desktop with pre-configured multimedia playback and to offer an easy-to-use USB installer with a persistence option.",
+        "rankPosition": 96,
+        "hits": 114,
+        "homepage": "http://neptuneos.com/",
+        "based_ons": [
+            "Debian (Stable)"
+        ],
+        "desktop_environments": [
+            "KDE Plasma"
+        ]
+    },
+    {
+        "name": "NuTyX",
+        "slug": "nutyx",
+        "link": "https://distrowatch.com/nutyx",
+        "about": "NuTyX is a French Linux distribution (with multi-language support) built from Linux From Scratch and Beyond Linux From Scratch, with a custom package manager called \"cards\". The package manager can install individual binary packages, a group of related binary packages (e.g. desktop packages, such as KDE or Xfce), and compile source packages from \"ports\". The distribution is designed for intermediate and advanced Linux users.",
+        "rankPosition": 97,
+        "hits": 114,
+        "homepage": "http://www.nutyx.org/",
+        "based_ons": [
+            "LFS"
+        ],
+        "desktop_environments": [
+            "Enlightenment",
+            "GNOME",
+            "IceWM",
+            "JWM",
+            "KDE Plasma",
+            "LXDE",
+            "MATE",
+            "Openbox",
+            "Ratpoison",
+            "Xfce"
+        ]
+    },
+    {
+        "name": "SystemRescue",
+        "slug": "systemrescue",
+        "link": "https://distrowatch.com/systemrescue",
+        "about": "SystemRescue is an Arch-based Linux system on a bootable CD-ROM or USB drive, designed for repairing a system and data after a crash. It also aims to provide an easy way to carry out administration tasks on a computer, such as creating and editing hard disk partitions. It contains many useful system utilities (GNU Parted, PartImage, FSTools) and some basic ones (editors, Midnight Commander, network tools). It aims to be very easy to use. The kernel of the system supports all of today's most important file systems, including ext2, ext3, ext4, ReiserFS, Reiser4FS, btrfs, XFS, JFS, VFAT, NTFS, ISO9660, as well as network file systems, such as Samba and NFS.",
+        "rankPosition": 98,
+        "hits": 111,
+        "homepage": "http://www.system-rescue.org/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "Xfce"
+        ]
+    },
+    {
+        "name": "ArchLabs",
+        "slug": "archlabs",
+        "link": "https://distrowatch.com/archlabs",
+        "about": "ArchLabs is a distribution based on Arch Linux and featuring the Openbox window manager as the primary desktop interface. ArchLabs is a 64-bit, rolling release distribution which provides a live DVD. The distribution can be installed using the AL-Installer system installer.",
+        "rankPosition": 99,
+        "hits": 106,
+        "homepage": "https://archlabslinux.com/",
+        "based_ons": [
+            "Arch"
+        ],
+        "desktop_environments": [
+            "No Desktop"
+        ]
+    },
+    {
+        "name": "Super Grub2",
+        "slug": "supergrub",
+        "link": "https://distrowatch.com/supergrub",
+        "about": "Super Grub2 Disk is a live CD that helps the user to boot into almost any operating system even if the system cannot boot into it by normal means. This allows a user to boot into an installed operating system if their GRUB installation has been overwritten, erased or otherwise corrupted. Super Grub2 Disk can detect installed operating systems and provide a boot menu which allows the user to boot into their desired operating system. Super Grub2 Disk is not an operating system itself, but a live boot loader which can be run from a CD or USB thumb drive.",
+        "rankPosition": 100,
+        "hits": 106,
+        "homepage": "http://www.supergrubdisk.org/super-grub2-disk/",
+        "based_ons": [],
+        "desktop_environments": [
+            ""
+        ]
+    }
+]
