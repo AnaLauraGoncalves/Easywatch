@@ -156,11 +156,13 @@ export default {
 
 .programs-wrapper {
   z-index: 1;
-  width: 100%;
   height: 300px;
   overflow-x: hidden;
   position: absolute;
   background-color: #f3f3f3;
+  left: 0;
+  right: 0;
+  margin: 0px 2rem;
 }
 
 #search a.program_select {

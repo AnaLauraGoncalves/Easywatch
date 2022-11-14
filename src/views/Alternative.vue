@@ -207,6 +207,7 @@ export default {
   margin: 0 auto;
   padding: 1rem;
   border-radius: 10px;
+  position: relative;
 }
 
 .column-2 {

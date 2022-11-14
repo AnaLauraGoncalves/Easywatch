@@ -121,6 +121,7 @@ export default {
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: 10px;
+  position: relative;
 }
 
 .column-2 {

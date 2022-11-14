@@ -31,17 +31,5 @@ export default {
 </template>
 
 <style scoped>
-header {
-  color: #fff;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: row;
-}
 
-.wrapper {
-  width: 100%;
-}
 </style>
