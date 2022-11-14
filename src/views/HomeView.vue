@@ -36,14 +36,7 @@ export default {
   <main>
     <JumbutreonVue :distro_search="igor" />
     <DistroPage />
-    <br /><br /><br />
     <RankingPage />
-    <br><br>
-    <!--<div class="Cards">
-    <div v-for="card in distros" :key="card">
-  <Cards :distro='card'/>
-  </div>
-</div>-->
   </main>
 </template>
 

@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import informacoesPage from "../views/Informacoes.vue";
+import InformacoesPage from "../views/Informacoes.vue";
 import DistroQuiz from "../views/DistroQuiz.vue";
 import RankingPage from "../components/RankingPage.vue";
 import ViewDistros from "../views/ViewDistros.vue";
-import Alternative from './../views/Alternative.vue';
+import Alternative from "./../views/Alternative.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,12 +16,12 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/informacoes/:distroname",
+      path: "/Informacoes/:distroname",
       name: "info",
-      component: informacoesPage,
+      component: InformacoesPage,
     },
     {
-      path: "/DistroQuiz.vue",
+      path: "/Quiz",
       name: "quiz",
       component: DistroQuiz,
     },
@@ -33,17 +33,16 @@ const router = createRouter({
     },
 
     {
-      path: "/ViewDistros.vue",
+      path: "/ViewDistros",
       name: "view-distros",
       component: ViewDistros,
     },
 
     {
-      path: "/Alternative.vue",
+      path: "/Alternative",
       name: "alternative-software",
       component: Alternative,
     },
-
   ],
 });
 

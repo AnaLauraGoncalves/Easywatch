@@ -1,40 +1,242 @@
 <template>
-  <div class="corpo">
-    <div class="central">
-      <div class="perguntas">
-        <div id="question"></div>
-        <div id="answer" v-if="counter <= 8"></div>
-        <div id="result" v-if="counter == 9">
-          <DistroResult :distroList="distrosResultado" />
+  <div class="perguntas">
+    <div class="corpo">
+      <div id="question" class="titleSpecific">
+        <h3>
+          {{ counter < 8 ? questionQuiz[counter]?.title : "Resultado" }}
+        </h3>
+      </div>
+      <div id="answer" v-if="counter <= 7">
+        <div v-if="questionQuiz[counter]?.img === true">
+          <img
+            id="img"
+            alt="imagem"
+            src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Tux_Mono.svg"
+          />
         </div>
-        <div id="botao">
-          <button v-if="counter == 0" id="submit" @click="initialize">
-            Começar
-          </button>
-          <button v-if="counter == 1" id="submit" @click="q2">Próximo</button>
-          <button v-if="counter == 2" id="submit" @click="q3">Próximo</button>
-          <button v-if="counter == 3" id="submit" @click="q4">Próximo</button>
-          <button v-if="counter == 4" id="submit" @click="q5">Próximo</button>
-          <button v-if="counter == 5" id="submit" @click="q6">Próximo</button>
-          <button v-if="counter == 6" id="submit" @click="q7">Próximo</button>
-          <button v-if="counter == 7" id="submit" @click="analyzeData">
-            Ver resultados
-          </button>
-          <button v-if="counter >= 8" id="submit" @click="window">
-            Reiniciar
-          </button>
+        <div
+          v-else
+          v-for="(option, index) in questionQuiz[counter]?.options"
+          :key="index"
+        >
+          <input
+            type="radio"
+            :id="option?.base"
+            :name="option?.name"
+            :value="option?.base"
+            @click="cleanEmpty"
+          />
+          <label :for="option?.base">{{ option?.text }}</label>
         </div>
+        <span class="empty" v-if="EmptyAnswer">Selecione uma opção*</span>
+      </div>
+      <div id="result" v-if="counter === 8">
+        <DistroResult :distroList="distrosResultado" />
+      </div>
+      <div id="botao">
+        <button v-if="counter > 0 && counter < 8" id="back" @click="back">
+          Voltar
+        </button>
+        <button id="submit" @click="next">
+          {{ counter < 8 ? questionQuiz[counter]?.button : "Reiniciar" }}
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 import DistroResult from "./DistroResult.vue";
 export default {
   name: "DistroQuizVue",
   data() {
     return {
+      EmptyAnswer: false,
+      questionQuiz: [
+        {
+          title: "Questionário sobre distribuições Linux:",
+          img: true,
+          button: "Começar",
+        },
+        {
+          title: "1. Qual o seu sistema operacional atual?",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "windows",
+              name: "os",
+              text: "Windows",
+              button: "Próximo",
+            },
+            {
+              base: "mac",
+              name: "os",
+              text: "MacOs",
+            },
+            {
+              base: "linux",
+              name: "os",
+              text: "Linux",
+            },
+            {
+              base: "outher",
+              name: "os",
+              text: "Outro",
+            },
+          ],
+        },
+        {
+          title:
+            "2. Você tem preferência sobre qual base deveria ser o seu novo linux?",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "debiam",
+              name: "base",
+              text: "Debian",
+            },
+            {
+              base: "redhat",
+              name: "base",
+              text: "Red Hat",
+            },
+            {
+              base: "arch",
+              name: "base",
+              text: "Arch",
+            },
+            {
+              base: "outher",
+              name: "base",
+              text: "Outro",
+            },
+          ],
+        },
+        {
+          title: "3. Você tem preferência a respeito do SystemD?",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "gnome",
+              name: "desktop",
+              text: "Gnome",
+            },
+            {
+              base: "kde",
+              name: "desktop",
+              text: "KDE",
+            },
+            {
+              base: "xfce",
+              name: "desktop",
+              text: "Xfce",
+            },
+            {
+              base: "outher",
+              name: "desktop",
+              text: "Outro",
+            },
+          ],
+        },
+        {
+          title: "4. Você tem preferência a respeito do SystemD?",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "yes",
+              name: "systemd",
+              text: "Sim, desejo ter SystemD",
+            },
+            {
+              base: "no",
+              name: "systemd",
+              text: "Não, não quero ter",
+            },
+            {
+              base: "dontcare",
+              name: "systemd",
+              text: "Não me importo",
+            },
+            {
+              base: "dontknow",
+              name: "systemd",
+              text: "Não sei o que é SystemD",
+            },
+          ],
+        },
+        {
+          title:
+            "5. Você deseja um sistema com interface gráfica (como Windows ou Mac, por exemplo)?",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "yes",
+              name: "gui",
+              text: "Sim, desejo ter interface gráfica",
+            },
+            {
+              base: "no",
+              name: "gui",
+              text: "Não, não quero ter gráfica",
+            },
+            {
+              base: "dontcare",
+              name: "gui",
+              text: "Não me importo",
+            },
+          ],
+        },
+        {
+          title: "6. Você é um usuário avançado de computadores?",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "yes",
+              name: "advanced",
+              text: "Sim, sou um usuário avançado",
+            },
+            {
+              base: "no",
+              name: "advanced",
+              text: "Não, não sou um usuário avançado",
+            },
+            {
+              base: "mid",
+              name: "advanced",
+              text: "Intermediario",
+            },
+          ],
+        },
+        {
+          title: "7. Você deseja atualizações constantes ou mais estabilidade?",
+          img: false,
+          button: "Ver resultados",
+          options: [
+            {
+              base: "yes",
+              name: "updates",
+              text: "Sim, desejo atualizações constantes",
+            },
+            {
+              base: "no",
+              name: "updates",
+              text: "Não, desejo mais estabilidade",
+            },
+            {
+              base: "dontcare",
+              name: "updates",
+              text: "Não me importo",
+            },
+          ],
+        },
+      ],
       counter: 0,
       distrosResultado: [
         {
@@ -42,24 +244,7 @@ export default {
           score: 0,
         },
       ],
-    };
-  },
-  components: {
-    DistroResult,
-  },
-  methods: {
-    window() {
-      this.counter = 0;
-      document.getElementById("question").innerHTML = ` 
-    <a>
-    Questionário sobre distribuições Linux:
-    </a>`;
-      document.getElementById("answer").innerHTML = `
-    <img id="img" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Tux_Mono.svg" alt="imagem"><br>`;
-    },
-    initialize() {
-      //objeto que salva as respostas do usuario
-      let userAnswers = {
+      userAnswers: {
         os: null,
         base: null,
         desktop: null,
@@ -67,235 +252,71 @@ export default {
         gui: null,
         advanced: null,
         updates: null,
-      };
-
-      //salva no cache do navegador em JSON
-      sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-      this.q1();
+      },
+    };
+  },
+  components: {
+    DistroResult,
+  },
+  methods: {
+    cleanEmpty() {
+      this.EmptyAnswer = false;
     },
-    q1() {
-      this.counter = 1;
-      document.getElementById("question").innerHTML = `
-    <a>
-    1. Qual o seu sistema operacional atual?
-    </a>`;
-      document.getElementById("answer").innerHTML = `
-    <div><input type="radio" id="windows" name="os" value="windows">
-    <label for="windows">Windows</label></div><br>
-    <div><input type="radio" id="mac" name="os" value="mac">
-    <label for="mac">MacOS</label></div><br>
-    <div><input type="radio" id="linux" name="os" value="linux">
-    <label for="linux">Linux</label></div><br>
-    <div><input type="radio" id="other" name="os" value="other">
-    <label for="other">Outro</label></div><br>`;
-    },
-
-    q2() {
-      let userAnswers = JSON.parse(sessionStorage.getItem("userAnswers")); //recebe o objeto da 1 questão
-      if (document.getElementById("windows").checked) {
-        userAnswers.os = "windows";
-      } else if (document.getElementById("mac").checked) {
-        userAnswers.os = "mac";
-      } else if (document.getElementById("linux").checked) {
-        userAnswers.os = "linux";
-      } else if (document.getElementById("other").checked) {
-        userAnswers.os = "other";
-      } else {
-        alert("Selecione uma opção");
-        return;
+    back() {
+      if (this.counter > 0) {
+        this.cleanEmpty();
+        document.querySelector("[type=radio]:checked").checked = false;
+        this.counter -= 1;
       }
-
-      sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers)); //salva no cache de novo
-
-      this.counter = 2;
-      document.getElementById("question").innerHTML = `
-    <a>
-    2. Você tem preferência sobre qual base deveria ser o seu novo linux?
-    </a>`;
-      document.getElementById("answer").innerHTML = `
-    <div><input type="radio" id="debian" name="base" value="debian">
-    <label for="debian">Debian</label></div><br>
-    <div><input type="radio" id="redhat" name="base" value="redhat">
-    <label for="redhat">Red Hat</label></div><br>
-    <div><input type="radio" id="arch" name="base" value="arch">
-    <label for="arch">Arch</label></div><br>
-    <div><input type="radio" id="other" name="base" value="other">
-    <label for="other">Outro</label></div><br>`;
     },
+    next() {
+      let img = document.getElementsByTagName("img").length;
+      let checked = document.querySelectorAll("[type=radio]:checked").length;
 
-    q3() {
-      let userAnswers = JSON.parse(sessionStorage.getItem("userAnswers"));
-      if (document.getElementById("debian").checked) {
-        userAnswers.base = "debian";
-      } else if (document.getElementById("redhat").checked) {
-        userAnswers.base = "redhat";
-      } else if (document.getElementById("arch").checked) {
-        userAnswers.base = "arch";
-      } else if (document.getElementById("other").checked) {
-        userAnswers.base = "other";
-      } else {
-        alert("Selecione uma opção");
-        return;
+      if (checked === 0 && img === 0 && this.counter <= 7) {
+        this.EmptyAnswer = true;
+      } else if (img >= 1) {
+        this.counter += 1;
+      } else if (checked > 0) {
+        let answer = document.querySelector("[type=radio]:checked").name;
+        let value = document.querySelector("[type=radio]:checked").value;
+        this.storeAnswers(answer, value);
+        this.cleanEmpty();
+        document.querySelector("[type=radio]:checked").checked = false;
+        if (this.counter >= 7) {
+          console.log(sessionStorage.getItem("userAnswers"));
+          this.analyzeData();
+        }
+        this.counter += 1;
+      } else if (this.counter > 7) {
+        this.counter = 0;
       }
-
-      sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-
-      this.counter = 3;
-      document.getElementById("question").innerHTML = `
-    <a>
-    3. Você tem preferência sobre qual ambiente de trabalho deveria ser o seu novo linux?
-    </a>`;
-      document.getElementById("answer").innerHTML = `
-    <div><input type="radio" id="gnome" name="desktop" value="gnome">
-    <label for="gnome">Gnome</label></div><br>
-    <div><input type="radio" id="kde" name="desktop" value="kde">
-    <label for="kde">KDE</label></div><br>
-    <div><input type="radio" id="xfce" name="desktop" value="xfce">
-    <label for="xfce">Xfce</label></div><br>
-    <div><input type="radio" id="other" name="desktop" value="other">
-    <label for="other">Outro</label></div><br>`;
     },
-    q4() {
-      let userAnswers = JSON.parse(sessionStorage.getItem("userAnswers"));
-      if (document.getElementById("gnome").checked) {
-        userAnswers.desktop = "gnome";
-      } else if (document.getElementById("kde").checked) {
-        userAnswers.desktop = "kde";
-      } else if (document.getElementById("xfce").checked) {
-        userAnswers.desktop = "xfce";
-      } else if (document.getElementById("other").checked) {
-        userAnswers.desktop = "other";
-      } else {
-        alert("Selecione uma opção");
-        return;
-      }
-
-      sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-
-      this.counter = 4;
-      document.getElementById("question").innerHTML = `
-    <a>
-    4. Você tem preferência a respeito do SystemD?
-    </a>`;
-      document.getElementById("answer").innerHTML = `
-    <div><input type="radio" id="yes" name="systemd" value="yes">
-    <label for="yes">Sim, desejo ter SystemD</label></div><br>
-    <div><input type="radio" id="no" name="systemd" value="no">
-    <label for="no">Não, não quero ter SystemD</label></div><br>
-    <div><input type="radio" id="dontcare" name="systemd" value="dontcare">
-    <label for="dontcare">Não me importo</label></div><br>
-    <div><input type="radio" id="dontknow" name="systemd" value="dontknow">
-    <label for="dontknow">Não sei o que é SystemD</label></div><br>`;
+    window() {
+      this.counter = 0;
     },
-    q5() {
-      let userAnswers = JSON.parse(sessionStorage.getItem("userAnswers"));
-      if (document.getElementById("yes").checked) {
-        userAnswers.systemd = "yes";
-      } else if (document.getElementById("no").checked) {
-        userAnswers.systemd = "no";
-      } else if (document.getElementById("dontcare").checked) {
-        userAnswers.systemd = "dontcare";
-      } else if (document.getElementById("dontknow").checked) {
-        userAnswers.systemd = "dontknow";
-      } else {
-        alert("Selecione uma opção");
-        return;
+    initialize() {},
+    storeAnswers(answer, value) {
+      for (var property in this.userAnswers) {
+        if (property === answer) {
+          this.userAnswers[property] = value;
+        }
       }
-
-      sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-
-      this.counter = 5;
-      document.getElementById("question").innerHTML = `
-    <a>
-    5. Você deseja um sistema com interface gráfica (como Windows ou Mac, por exemplo)?
-    </a>`;
-      document.getElementById("answer").innerHTML = `
-    <div><input type="radio" id="yes" name="gui" value="yes">
-    <label for="yes">Sim, desejo ter interface gráfica</label></div><br>
-    <div><input type="radio" id="no" name="gui" value="no">
-    <label for="no">Não, não quero ter interface gráfica</label></div><br>
-    <div><input type="radio" id="dontcare" name="gui" value="dontcare">
-    <label for="dontcare">Não me importo</label></div><br>`;
-    },
-    q6() {
-      let userAnswers = JSON.parse(sessionStorage.getItem("userAnswers"));
-      if (document.getElementById("yes").checked) {
-        userAnswers.gui = "yes";
-      } else if (document.getElementById("no").checked) {
-        userAnswers.gui = "no";
-      } else if (document.getElementById("dontcare").checked) {
-        userAnswers.gui = "dontcare";
-      } else {
-        alert("Selecione uma opção");
-        return;
-      }
-
-      sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-
-      this.counter = 6;
-      document.getElementById("question").innerHTML = `
-    <a>
-    6. Você é um usuário avançado de computadores?
-    </a>`;
-      document.getElementById("answer").innerHTML = `
-    <div><input type="radio" id="yes" name="advanced" value="yes">
-    <label for="yes">Sim, sou usuário avançado</label></div><br>
-    <div><input type="radio" id="no" name="advanced" value="no">
-    <label for="no">Não, não sou usuário avançado</label></div><br>
-    <div><input type="radio" id="mid" name="advanced" value="mid">
-    <label for="mid">Intermediario</label></div><br>`;
-    },
-
-    q7() {
-      let userAnswers = JSON.parse(sessionStorage.getItem("userAnswers"));
-      if (document.getElementById("yes").checked) {
-        userAnswers.advanced = "yes";
-      } else if (document.getElementById("no").checked) {
-        userAnswers.advanced = "no";
-      } else if (document.getElementById("mid").checked) {
-        userAnswers.advanced = "mid";
-      } else {
-        alert("Selecione uma opção");
-        return;
-      }
-
-      sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
-
-      this.counter = 7;
-      document.getElementById("question").innerHTML = `
-    <a>
-    7. Você deseja atualizações constantes ou mais estabilidade?
-    </a>`;
-      document.getElementById("answer").innerHTML = `
-    <div><input type="radio" id="yes" name="updates" value="yes">
-    <label for="yes">Sim, desejo atualizações constantes</label></div><br>
-    <div><input type="radio" id="no" name="updates" value="no">
-    <label for="no">Não, desejo mais estabilidade</label></div><br>
-    <div><input type="radio" id="dontcare" name="updates" value="dontcare">
-    <label for="dontcare">Não me importo</label></div><br>`;
+      sessionStorage.setItem("userAnswers", JSON.stringify(this.userAnswers));
     },
 
     async analyzeData() {
-      let userAnswers = JSON.parse(sessionStorage.getItem("userAnswers"));
-      if (document.getElementById("yes").checked) {
-        userAnswers.updates = "yes";
-      } else if (document.getElementById("no").checked) {
-        userAnswers.updates = "no";
-      } else if (document.getElementById("dontcare").checked) {
-        userAnswers.updates = "dontcare";
-      } else {
-        alert("Selecione uma opção");
-        return;
-      }
+      const requestURL =
+        "https://api.allorigins.win/raw?url=https://pastebin.com/raw/wG6f0ynp";
 
-      this.counter = 8;
-      //string de conexão p/ informações das distros e suas respectivas pontuações
-      const requestURL = "https://pastebin.com/raw/wG6f0ynp";
-      const response = await fetch(requestURL); //abre
-      const dados = await response.json(); //espera o retorno do JSON
+      let dados = [];
+      await axios
+        .get(requestURL)
+        .then((response) => (dados = response?.data))
+        .catch((error) => console.log("error ->", error));
 
-      const defaultValues = dados.defaultValues;
-      const distros = dados.distros;
+      const defaultValues = dados?.defaultValues;
+      const distros = dados?.distros;
 
       let distroScore = {
         distroName: "",
@@ -306,38 +327,44 @@ export default {
 
       for (const dist of distros) {
         let score = 0;
-        if (userAnswers.base == dist.based_on) {
+        if (this.userAnswers.base == dist.based_on) {
           score += parseFloat(defaultValues.based_on); //peso da questão
         }
-        if (userAnswers.systemd == "yes" && dist.systemd == true) {
+        if (this.userAnswers.systemd == "yes" && dist.systemd == true) {
           score += parseFloat(defaultValues.systemd);
-        } else if (userAnswers.systemd == "no" && dist.systemd == false) {
+        } else if (this.userAnswers.systemd == "no" && dist.systemd == false) {
           score += parseFloat(defaultValues.systemd);
-        } else if (userAnswers.systemd == "dontknow" && dist.systemd == true) {
+        } else if (
+          this.userAnswers.systemd == "dontknow" &&
+          dist.systemd == true
+        ) {
           score += parseFloat(defaultValues.systemd) * 0.5;
         }
-        if (userAnswers.gui == "no" && dist.windowmanager == "no") {
+        if (this.userAnswers.gui == "no" && dist.windowmanager == "no") {
           score += parseFloat(defaultValues.windowmanager);
-        } else if (userAnswers.gui == "yes" && dist.windowmanager == "no") {
+        } else if (
+          this.userAnswers.gui == "yes" &&
+          dist.windowmanager == "no"
+        ) {
           score -= parseFloat(defaultValues.windowmanager); //perde pontos
         }
-        if (userAnswers.desktop == dist.windowmanager) {
+        if (this.userAnswers.desktop == dist.windowmanager) {
           score += parseFloat(defaultValues.windowmanager);
         }
-        if (userAnswers.advanced == "no") {
+        if (this.userAnswers.advanced == "no") {
           score +=
             parseFloat(defaultValues.user_friendly) *
             parseFloat(dist.user_friendly);
-        } else if (userAnswers.advanced == "mid") {
+        } else if (this.userAnswers.advanced == "mid") {
           score +=
             parseFloat(defaultValues.user_friendly) *
             parseFloat(dist.user_friendly) *
             0.5;
         }
-        if (userAnswers.updates == "yes" && dist.rolling_release == true) {
+        if (this.userAnswers.updates == "yes" && dist.rolling_release == true) {
           score += parseFloat(defaultValues.rolling_release);
         } else if (
-          userAnswers.updates == "no" &&
+          this.userAnswers.updates == "no" &&
           dist.rolling_release == false
         ) {
           score += parseFloat(defaultValues.rolling_release);
@@ -350,19 +377,12 @@ export default {
       }
 
       distrosScores.sort((a, b) => (a.score < b.score ? 1 : -1));
-
       this.result(distrosScores);
     },
     result(distrosScores) {
-      //mostra os resultdados
-      //o que mais muda
-      document.getElementById("question").innerHTML = `
-    <a class="titulo-resultado">
-    Resultado
-    </a>`;
-
+      console.log("score ", distrosScores);
       this.distrosResultado = distrosScores;
-      this.counter = 9;
+      console.log("resultado ", this.distrosResultado);
     },
   },
   mounted() {
@@ -378,53 +398,54 @@ export default {
 </script>
 
 <style>
+@media (max-width: 465px) {
+  div.perguntas {
+    min-width: 338px;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .corpo #answer div {
+    width: 318px;
+  }
+}
 .corpo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #080d1f;
-  color: #fff;
-  padding: 10vh 10vw;
+  padding: 0 12px;
 }
 
-.central {
-  background-color: #ffffff80;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  width: 80vh;
+#app div.DistroQuiz {
+  margin-top: calc(4rem + 70px);
+  width: 100%;
+  padding-bottom: 4rem;
 }
 
 .perguntas {
-  height: 100%;
-  width: 100%;
-  padding: 5vh;
+  background-color: #253237;
+  min-width: 500px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 4rem;
 }
 
-#question {
-  border-left: 0.5vh solid #feca05;
-  padding: 5vh;
-  height: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#question a {
+#question h3 {
   font-family: "Poppins", sans-serif;
-  color: black;
+  color: white;
   font-size: 3vh;
 }
 
+#question h3:hover {
+  background-color: transparent;
+}
+
 #answer {
-  padding: 3vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 65%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 1rem 0;
 }
 
 #answer input[type="radio"] {
@@ -437,7 +458,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60vh;
+  width: 45vw;
 }
 
 #answer label {
@@ -445,37 +466,65 @@ export default {
   display: inline-block;
   background-color: #ddd;
   padding: 10px 20px;
-  font-family: sans-serif, Arial;
   font-size: 16px;
-  border: 2px solid #444;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   width: 100%;
 }
 
 #answer label:hover {
-  background-color: #dfd;
+  background-color: #5c6b73;
+  color: white;
 }
 
 #answer input[type="radio"]:focus + label {
-  border: 2px dashed #444;
+  border: none;
 }
 
 #answer input[type="radio"]:checked + label {
-  background-color: #bfb;
-  border-color: #4c4;
+  background-color: #5c6b73;
+  color: white;
+}
+
+#back {
+  background-color: rgba(254, 202, 5, 1);
+  border: none;
+  color: #000;
+  font-size: large;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  height: 50px;
+  width: 150px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-right: 1rem;
+}
+
+#back:hover {
+  background-color: hsl(47, 100%, 45%);
+  color: #080d1f;
+  text-decoration: none;
 }
 
 #submit {
-  background-color: #feca05;
+  background-color: rgba(254, 202, 5, 1);
   border: none;
-  color: #080d1f;
-  padding: 1vh 2vw;
-  text-align: center;
-  text-decoration: none;
-  font-size: 2vh;
-  cursor: pointer;
-  border-radius: 0.5vh;
+  color: #000;
+  font-size: large;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  height: 50px;
+  width: 150px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 #submit:hover {
@@ -492,13 +541,21 @@ export default {
 }
 
 #img {
-  height: 100%;
-  width: 100%;
-  padding: 5vh;
+  width: 35%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.empty {
+  color: #fe2712;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 #result {
-  padding: 3vh;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

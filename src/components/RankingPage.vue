@@ -5,7 +5,7 @@
         <!--<img v-if="images[1]" :src="images[1]" alt="imagem distro 2">-->
       </div>
       <div>
-        <h1 style="color:black">{{ ranks[1].name }}</h1>
+        <h1 style="color: black">{{ ranks[1].name }}</h1>
         <img v-if="images[1]" :src="images[1]" alt="imagem distro 2" />
         <!-- <p>{{ranks[1].about}}</p>-->
       </div>
@@ -16,7 +16,7 @@
     </div>
     <div class="item gold" @click="openDistro(ranks[0].name)">
       <div>
-        <h1 style="color:black">{{ ranks[0].name }}</h1>
+        <h1 style="color: black">{{ ranks[0].name }}</h1>
         <img v-if="images[0]" :src="images[0]" alt="imagem distro 1" />
         <!-- <p>{{ranks[0].about}}</p>-->
       </div>
@@ -26,12 +26,11 @@
       </div>
     </div>
     <div class="item copper" @click="openDistro(ranks[2].name)">
-
       <div>
-        <h1 style="color:black">{{ ranks[2].name }}</h1>
+        <h1 style="color: black">{{ ranks[2].name }}</h1>
         <div>
-        <img v-if="images[2]" :src="images[2]" alt="imagem distro 3" />
-      </div>
+          <img v-if="images[2]" :src="images[2]" alt="imagem distro 3" />
+        </div>
         <!--<p>{{ranks[2].about}}</p>-->
       </div>
       <div>
@@ -40,7 +39,6 @@
       </div>
     </div>
   </div>
-  <hr class="linha" />
   <h1 class="title">Ranking Completo</h1>
   <div v-if="aux">
     <ul class="lista">
@@ -64,7 +62,7 @@
       </li>
     </div>
   </ul>
-  <br>
+  <br />
   <div
     style="
       width: 100%;
@@ -91,7 +89,11 @@ export default {
   },
   methods: {
     openDistro(distro) {
-      this.$router.push({ name: "info", params: { distroname: distro }, path: "/info/" + distro });
+      this.$router.push({
+        name: "info",
+        params: { distroname: distro },
+        path: "/Info/" + distro,
+      });
     },
     async getImage(id) {
       let distroName = "";
@@ -140,17 +142,58 @@ export default {
 };
 </script>
 <style scoped>
-/* body{
-  font-family: Poppins;
-  src: url(../assets/Poppins-Black.ttf)
-} */
+@media (max-width: 465px) {
+  div.bigThree {
+    margin: 0;
+    padding: 0;
+  }
 
+  div.bigThree .item div {
+    margin-top: unset;
+  }
+  div.bigThree h1 {
+    transform: rotate(270deg);
+  }
+  ul.lista .item-simples {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 110px 30px 115px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  ul.lista .item-simples .posicao-item {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+  }
+  ul.lista .item-simples h1.nome-item {
+    text-align: start;
+  }
+  ul.lista .item-simples .nome-item,
+  ul.lista .item-simples .posicao-item,
+  ul.lista .item-simples .hits-item {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
 .bigThree {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 1em;
   padding: 2em;
+  margin-bottom: 7.2rem;
+}
+
+.gold:hover,
+.silver:hover,
+.copper:hover {
+  opacity: 0.8;
+  transform: 0.2s;
 }
 .item {
   display: flex;
@@ -231,8 +274,8 @@ export default {
 }
 
 .item-margem {
-  border-bottom: white 1px solid;
-  border-top: white 1px solid;
+  border-bottom: #ffffff50 1px solid;
+  border-top: #ffffff50 1px solid;
   cursor: pointer;
   /* margin: 0.5em; */
 }
@@ -246,6 +289,11 @@ export default {
   width: 100%;
 }
 
+.item-simples h1,
+.item-simples h2,
+.item-simples h3 {
+  margin-bottom: 0;
+}
 .nome-item {
   font-size: 1.5em;
   width: 50%;
@@ -271,7 +319,7 @@ button {
 }
 
 h1,
-.nome-item{
+.nome-item {
   color: white;
 }
 </style>

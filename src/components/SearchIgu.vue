@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-row align="center">
         <v-col cols="12" sm="6">
-          <v-subheader v-text="'Multiple with persistent hint'"></v-subheader>
+          <v-subheader :v-text="'Multiple with persistent hint'"></v-subheader>
         </v-col>
         <v-col cols="12" sm="6">
           <v-select
@@ -19,7 +19,7 @@
 
         <v-col cols="12" sm="6">
           <v-subheader
-            v-text="'Multiple (Chips) with persistent hint'"
+            :v-text="'Multiple (Chips) with persistent hint'"
           ></v-subheader>
         </v-col>
 
@@ -36,12 +36,15 @@
         </v-col>
       </v-row>
     </v-container>
-   <v-select v-model="selected" :suggestions="suggestions" label="name"></v-select>
+    <v-select
+      v-model="selected"
+      :suggestions="suggestions"
+      label="name"
+    ></v-select>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "search-igu",
   data() {
@@ -50,20 +53,18 @@ export default {
     };
   },
 
-
   props: {
-            suggestions: Array,
-        },
+    suggestions: Array,
+  },
 
   methods: {
-    suggestions() {
+    suggestion() {
       return this.suggestions;
     },
   },
 
   computed: {
-
-   /* distroList() {
+    /* distroList() {
       for (const distro of this.distros) {
         if (distro.name == this.params.name) {
           return distro;
@@ -74,6 +75,4 @@ export default {
   },
 };
 </script>
-<style>
-
-</style>
+<style></style>

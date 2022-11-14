@@ -1,18 +1,18 @@
 <script setup>
-import Footer from "./components/Footer.vue";
-import Navbar from "./components/Navbar.vue"
+import Navbar from "./components/Navbar.vue";
+import NewFooter from "@/components/Footer.vue";
 </script>
 
 <script>
 export default {
   name: "App",
   components: {
-    Footer,
     Navbar,
+    NewFooter,
   },
   methods: {
     loadPage: function () {
-      this.$router.push({path: "/", addToHistory: true});
+      this.$router.push({ path: "/", addToHistory: true });
     },
   },
 
@@ -20,20 +20,14 @@ export default {
     this.loadPage();
   },
 };
-
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <Navbar />
-      </nav>
-    </div>
-  </header>
-  <router-view>
-  </router-view>
-  <Footer></Footer>
+  <nav>
+    <Navbar />
+  </nav>
+  <router-view> </router-view>
+  <NewFooter></NewFooter>
 </template>
 
 <style scoped>
@@ -49,16 +43,5 @@ header {
 
 .wrapper {
   width: 100%;
-}
-
-.image{
-  height: 100%;
-
-}
-
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 </style>

@@ -2,11 +2,16 @@
   <div class="conteiner" v-if="distro">
     <div class="conteiner-top">
       <h1>{{ distro.name }}</h1>
-      <br><br>
+      <br /><br />
     </div>
 
     <div class="conteiner-center">
-      <img v-if="this.imageUrl" :src="this.imageUrl" alt="imagem distro" />
+      <img
+        v-if="distro.slug"
+        style="object-fit: contain; height: 150px"
+        v-bind:src="`https://api.allorigins.win/raw?url=https://distrowatch.com/images/yvzhuwbpy/${distro.slug}.png`"
+        :alt="distro?.name"
+      />
       <div class="text-info">
         <p><span class="negrito">Baseada em:</span>{{ distro.based_ons }}</p>
         <p><span class="negrito">Arquitetura:</span></p>
@@ -14,12 +19,12 @@
           <span class="negrito">Ambiente Desktop:</span>
           {{ distro.desktop_environments }}
         </p>
-        <p><span class="negrito">Popularidade:</span>{{ distro.popularity}}</p>
-        <br>
+        <p><span class="negrito">Popularidade:</span>{{ distro.popularity }}</p>
+        <br />
       </div>
     </div>
     <hr />
-    <br>
+    <br />
     <div class="conteiner-bottom">
       <p>{{ distro.about }}</p>
     </div>
@@ -70,6 +75,7 @@ export default {
     },
     passImage(response) {
       for (const image of response.data.value) {
+        console.log(image.url);
         this.imageUrl = image.url;
       }
     },
@@ -111,6 +117,7 @@ img {
   height: 150px;
   left: auto;
   margin-top: 10px;
+  object-fit: cover;
 }
 .info-links {
   display: flex;

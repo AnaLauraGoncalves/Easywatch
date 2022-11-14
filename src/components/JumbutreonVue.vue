@@ -1,66 +1,57 @@
 <template>
   <!--background-->
-  <div class="container">
+  <div class="container" id="jumbutreon">
     <div class="container-1">
       <div class="title">
-        <h1>EASYWATCH</h1>
+        <h1 style="color: #feca05">EASYWATCH</h1>
         <h2><strong>Linux in a easy way</strong></h2>
       </div>
       <div class="texto">
         <p>
-          EasyWatch é um projeto de pesquisa que visa facilitar a escolha de uma
-          distribuição Linux para usuários iniciantes.
+          EasyWatch is a research project that aims to facilitate the choice of
+          a Linux distribution for novice users.
         </p>
       </div>
       <button type="button" class="button" @click="go_to_quiz()">
         Start Quiz
       </button>
     </div>
-    <div class="image" style="margin-rigth: 0">
-    </div>
-    <div class="container-1-2">
-    </div>
- 
-
-  <div class="container-2">
+  </div>
+  <div class="container-2" id="jumb-2">
     <div class="container-2-1">
-      <img
-        src="../assets/img/linux4.png"
-        alt="linux terminal"
-        height="150px"
-        width="200px"
-      />
-      <div
-        class="container-2-1-1"
-        style="border-left: 0.5vh solid #feca05; margin-left: 5%"
-      >
-        <h1 style="margin-left: 5%">O que é Linux?</h1>
-        <p style="text-align: left; margin-left: 5%">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-          aliquid dolore blanditiis dolores quaerat nemo omnis sed voluptas
-          praesentium totam adipisci natus, et magni, ut porro earum cum id
-          quod. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Nesciunt praesentium vel ratione sed quidem aperiam, deserunt
-          perspiciatis, officiis, quos sunt placeat voluptatem veritatis.
-          Consequuntur recusandae maiores minus eligendi! Consequatur,
-          provident!
-        </p>
-      </div>
+      <h1>What is a Linux?</h1>
+      <p>
+        To explain what Linux is, first an explanation of what an operating
+        system is is needed. In a simplified way, an operating system can be
+        described as a software that intermediates the communication between
+        user and machine, enabling the execution of programs. In this sense, it
+        is possible to say that Linux is nothing more than the core of an open
+        source operating system, called Kernel. In order to obtain a complete
+        system, ready for the end user, this core is expanded and added with
+        specific functionalities for the type of machine on which it must
+        operate, this is how Linux distros arises.
+      </p>
     </div>
-    <div class="container-3-2">
-      <h1 style="text-align: end; margin-right: 5%">Por que usar Linux?</h1>
-      <p style="text-align: end; margin-right: 5%">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aliquid
-        dolore blanditiis dolores quaerat nemo omnis sed voluptas praesentium
-        totam adipisci natus, et magni, ut porro earum cum id quod. Lorem ipsum
-        dolor, sit amet consectetur adipisicing elit. Nesciunt praesentium vel
-        ratione sed quidem aperiam, deserunt perspiciatis, officiis, quos sunt
-        placeat voluptatem veritatis. Consequuntur recusandae maiores minus
-        eligendi! Consequatur, provident!
+    <img
+      src="https://images.unsplash.com/photo-1499914485622-a88fac536970?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=100"
+      alt="linux terminal"
+    />
+    <div class="container-2-2">
+      <h1>Why use Linux?</h1>
+      <p>
+        The main differential of desktop operating systems derived from Linux is
+        the fact that they are open source, which means they can have their
+        source code shared, studied by anyone and are, for the most part,
+        costless. In addition, factors such as a high standard of security,
+        frequent updates and stability will guarantee the user a more than
+        satisfactory experience with an operating system, also having a large
+        technical support community, its own community. Another relevant factor
+        is the possibility of choosing the distro that best suits your needs and
+        resources. Therefore, freedom to choose their own requirements for
+        managing computer resources is encouraged.
       </p>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -71,10 +62,10 @@ export default {
 
   methods: {
     go_to_info() {
-      this.$router.push("/Info.vue");
+      this.$router.push("/Informacoes");
     },
     go_to_quiz() {
-      this.$router.push("/DistroQuiz.vue");
+      this.$router.push("/Quiz");
     },
   },
 
@@ -84,45 +75,138 @@ export default {
 };
 </script>
 <style scoped>
+@media (max-width: 465px) {
+  #jumbutreon {
+    display: block;
+    flex-direction: unset;
+    margin: 0;
+  }
+  #jumbutreon .container-1 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 4rem;
+  }
+  #jumbutreon .container-1 .texto {
+    margin-right: 5%;
+  }
+  #jumbutreon .container-1 .button {
+    margin: 0 auto;
+  }
+  #jumb-2.container-2 {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 4rem;
+    max-height: unset;
+  }
+  #jumb-2.container-2 .container-2-1 p {
+    margin: 0;
+    margin-left: 5%;
+  }
+  #jumb-2.container-2 .container-2-1 h1 {
+    margin-bottom: 5%;
+  }
+  #jumb-2.container-2 .container-2-2 h1 {
+    margin-left: 5%;
+    margin-right: 0;
+    text-align: start;
+  }
+  #jumb-2.container-2 .container-2-2 p {
+    margin: 0;
+    margin-left: 5%;
+  }
+  #jumb-2.container-2 img {
+    border-left: 0.5vh solid #feca05;
+    padding: 4rem 0;
+    padding-left: 5%;
+    margin: 0;
+    width: 95%;
+    object-fit: cover;
+  }
+  #jumb-2.container-2 .container-2-2 {
+    margin: 0;
+    padding: 0;
+    border-right: none;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    border-left: 0.5vh solid #feca05;
+  }
+  #jumb-2 .container-2-1 {
+    margin: 0;
+  }
+  #info_container.container {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+#jumbutreon,
+#jumb-2 {
+  padding: 0;
+  margin: 0;
+}
+
+#jumb-2 {
+  margin-bottom: 7.2rem;
+}
 .container-1 {
+  gap: 1rem;
   border-left: 0.5vh solid #feca05;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
-  margin-bottom: 10%;
-  max-height: 1200px;
-  max-width: 1400px;
+  margin: 0 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
 }
 .container-2 {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 10%;
-  max-height: 1200px;
-  max-width: 1400px;
+  gap: 2rem;
 }
 
 .container-2-1 {
-  display: flex;
+  display: grid;
   flex-direction: row;
-  gap: 15px;
-  margin-bottom: 5%;
-  margin-right: 10%;
-  margin-left: 10%;
-  max-height: 1200px;
-  max-width: 1400px;
+  gap: 2rem;
+  margin: 0 1.4rem 0 1.5rem;
 }
 
-.container-3-2 {
+.container-2-2 {
+  display: grid;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0 1.4rem 0 1.5rem;
   border-right: 0.5vh solid #feca05;
-  display: flex;
-  align-self: flex-end;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 15px;
-  max-height: 1200px;
-  max-width: 55%;
+}
+.container-2-1 {
+  border-left: 0.5vh solid #feca05;
+}
+.container-2 img {
+  height: 500px;
+  width: 90%;
+  text-align: center;
+  object-fit: cover;
+  margin: 0 3.5rem;
+  padding: 0;
+}
+.container-2 .container-2-1 p {
+  text-align: left;
+  margin-left: 5%;
+  margin-right: 2.5rem;
+}
+.container-2 .container-2-1 h1 {
+  margin-left: 5%;
+}
+.container-2 .container-2-2 h1 {
+  text-align: end;
+  margin-right: 5%;
+}
+.container-2 .container-2-2 p {
+  text-align: left;
+  margin-right: 5%;
+  margin-left: 4.5rem;
 }
 .title {
   display: flex;
@@ -137,7 +221,7 @@ export default {
 button {
   background-color: rgba(254, 202, 5, 1);
   border: none;
-  color: rgb(245, 245, 245);
+  color: #000;
   font-size: large;
   border-radius: 10px;
   margin-left: 5%;
@@ -145,11 +229,13 @@ button {
   height: 50px;
   width: 150px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 button:hover {
   background-color: rgba(254, 202, 5, 0.5);
   border: none;
-  color: white;
   border-radius: 10px;
   margin-left: 5%;
   margin-bottom: 5%;
@@ -178,24 +264,17 @@ button:hover {
   padding: 0;
   margin-top: 2%;
 }
-/*@font-face {
-  font-family: Poppins;
-  src: url(../assets/Poppins-Black.ttf)
-}*/
 
 h1 {
   color: white;
-  /*font-family: 'Poppins';*/
   font-style: normal;
   font-size: 40px;
 }
 
-h2{
+h2 {
   color: white;
-  /*font-family: 'Poppins';*/
   font-style: normal;
   font-size: 30px;
-
 }
 
 p {

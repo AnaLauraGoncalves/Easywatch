@@ -70,8 +70,7 @@ export default {
 };
 </script>
 <style>
-canvas {
-  max-width: auto;
-  max-height: 40vh !important;
+#result canvas {
+  max-height: 20rem;
 }
 </style>

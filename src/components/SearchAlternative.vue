@@ -1,5 +1,5 @@
 <template>
-  <div id="search" class="search-container">
+  <div class="search-container">
     <div class="search-wrapper">
       <div class="search-bar">
         <form onsubmit="event.preventDefault();" role="search">
@@ -23,18 +23,18 @@
         >
           <a
             class="program_select"
+            :style="suggestions.icon ? 'display: grid;' : 'display: block'"
             v-on:click="
               searchSuggestion = program.name;
               emitSelected(searchSuggestion);
               emitSubmit();
             "
           >
-            <div class="program-card__icon">
+            <div v-if="suggestions.icon" class="program-card__icon">
               <img
                 style="height: 32px; object-fit: contain"
-                v-if="program.slug"
-                v-bind:src="`https://api.allorigins.win/raw?url=https://distrowatch.com/images/yvzhuwbpy/${program.slug}.png`"
-                :alt="program?.name"
+                v-bind:src="suggestions.icon"
+                alt="program icon"
               />
             </div>
             <h2
@@ -49,7 +49,8 @@
     </div>
   </div>
 </template>
-<script>
+
+<script lang="js">
 export default {
   name: "search-vue",
 
@@ -92,7 +93,7 @@ export default {
   created() {
     this.filterdPrograms = this.suggestions;
   },
-  mounted() {},
+  mounted() {console.log('suggestions',this.suggestions)},
 };
 </script>
 <style>
@@ -154,16 +155,40 @@ export default {
   border-radius: 10px;
 }
 
-.programs-wrapper {
-  z-index: 1;
+.column-2 .cards #programs-wrapper.programs-wrapper {
+  background-color: #ddd;
+}
+.column-2 .cards #programs-wrapper.programs-wrapper .program-card {
   width: 100%;
-  height: 300px;
-  overflow-x: hidden;
-  position: absolute;
-  background-color: #f3f3f3;
+  height: 100%;
+  padding: 1rem;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 10px;
+  background-color: white;
+}
+.column-2 .cards #programs-wrapper.programs-wrapper .program-card h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
 }
 
-#search a.program_select {
+.cards #programs-wrapper.programs-wrapper {
+  width: 100%;
+  display: grid;
+  overflow-x: hidden;
+  grid-gap: 1rem;
+  position: unset;
+  padding: 1.6rem;
+  margin-bottom: 4rem;
+  border-radius: 10px;
+  height: fit-content;
+  justify-content: center;
+  background-color: #ddd;
+  grid-template-columns: auto auto auto;
+}
+
+#alternative .program_select {
   width: 100%;
   display: grid;
   cursor: pointer;
@@ -171,6 +196,19 @@ export default {
   justify-content: flex-start;
   grid-template-columns: 1fr 3fr;
   grid-gap: 10px;
+  text-decoration: none;
+  color: #080d1f;
+  border-bottom: 2px solid #ddd;
+}
+
+a.program_select {
+  display: grid;
+  cursor: pointer;
+  align-items: center;
+  justify-content: flex-start;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 10px;
+  width: 100%;
   text-decoration: none;
   color: #080d1f;
   border-bottom: 2px solid #ddd;

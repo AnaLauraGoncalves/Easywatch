@@ -1,5 +1,5 @@
 <template>
-  <div class="DistroQuiz">
+  <div class="DistroQuiz container">
     <DistroQuizVue />
   </div>
 </template>
@@ -12,13 +12,11 @@ export default {
   components: {
     DistroQuizVue,
   },
-
 };
 </script>
 
 <style scoped>
 .DistroQuiz {
-  margin-top: 10%;
+  margin-top: 2rem;
 }
 </style>
-

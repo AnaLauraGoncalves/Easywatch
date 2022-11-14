@@ -1,7 +1,7 @@
 <template>
   <!--Pronto-->
   <footer class="footer">
-      <span class="text-muted"> Easywatch© 2022 </span>
+    <span class="text-muted"> Easywatch© 2022 </span>
   </footer>
 </template>
 
@@ -12,10 +12,14 @@ export default {
 </script>
 <style>
 .footer {
-  background-color: #090c1a;
-  margin-bottom: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
+  min-width: 99vw;
+  padding: 0.6rem 0;
+  margin-bottom: 0;
   text-align: center;
+  position: absolute;
+  background-color: #090c1a;
 }
-
 </style>
