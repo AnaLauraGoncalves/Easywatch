@@ -15,7 +15,7 @@ export default {
   left: 0;
   bottom: 0;
   width: 100%;
-  min-width: 99vw;
+  min-width: 98vw;
   padding: 0.6rem 0;
   margin-bottom: 0;
   text-align: center;

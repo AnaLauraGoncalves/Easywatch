@@ -31,15 +31,22 @@
         <span class="empty" v-if="EmptyAnswer">Selecione uma opção*</span>
       </div>
       <div id="result" v-if="counter === 8">
-        <DistroResult :distroList="distrosResultado" />
+        <DistroResult
+          :distroList="distrosResultado"
+          v-model:propName="distrosResultado"
+        />
       </div>
       <div id="botao">
         <button v-if="counter > 0 && counter < 8" id="back" @click="back">
           Voltar
         </button>
-        <button id="submit" @click="next">
-          {{ counter < 8 ? questionQuiz[counter]?.button : "Reiniciar" }}
+        <button v-if="counter >= 0 && counter < 7" id="submit" @click="next">
+          {{ questionQuiz[counter]?.button }}
         </button>
+        <button v-if="counter == 7" id="submit" @click="analyzeData">
+          {{ questionQuiz[counter]?.button }}
+        </button>
+        <button v-if="counter == 8" id="submit" @click="next">Reiniciar</button>
       </div>
     </div>
   </div>
@@ -283,10 +290,6 @@ export default {
         this.storeAnswers(answer, value);
         this.cleanEmpty();
         document.querySelector("[type=radio]:checked").checked = false;
-        if (this.counter >= 7) {
-          console.log(sessionStorage.getItem("userAnswers"));
-          this.analyzeData();
-        }
         this.counter += 1;
       } else if (this.counter > 7) {
         this.counter = 0;
@@ -378,11 +381,10 @@ export default {
 
       distrosScores.sort((a, b) => (a.score < b.score ? 1 : -1));
       this.result(distrosScores);
+      this.counter += 1;
     },
     result(distrosScores) {
-      console.log("score ", distrosScores);
       this.distrosResultado = distrosScores;
-      console.log("resultado ", this.distrosResultado);
     },
   },
   mounted() {
@@ -415,7 +417,6 @@ export default {
 #app div.DistroQuiz {
   margin-top: calc(4rem + 70px);
   width: 100%;
-  padding-bottom: 4rem;
 }
 
 .perguntas {

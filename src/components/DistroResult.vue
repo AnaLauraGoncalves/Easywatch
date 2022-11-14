@@ -1,5 +1,9 @@
 <template>
-  <Bar :chart-data="chartData" :chart-options="chartOptions" />
+  <Bar
+    v-bind:chart-data="chartData"
+    v-bind:chart-options="chartOptions"
+    v-model:propName="chartData"
+  />
 </template>
 <script>
 import { Bar } from "vue-chartjs";
@@ -55,6 +59,7 @@ export default {
       },
     };
   },
+  // methods: {},
   mounted() {
     this.chartData = {
       labels: this.distroList.map((distroScore) => distroScore.distroName),

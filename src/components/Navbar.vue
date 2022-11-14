@@ -65,7 +65,9 @@ export default {
 <style scoped>
 .sticky-top {
   position: fixed;
-  width: 100%;
+  padding: 0;
+  margin: 0;
+  width: 99vw;
   top: 0;
 }
 .navbar-nav {

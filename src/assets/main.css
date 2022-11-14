@@ -18,9 +18,7 @@
   max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0;
-  padding-top: 70px;
-  padding-bottom: -70px;
+  padding: 70px 0;
   position: relative;
   font-weight: normal;
   /* overflow-x: hidden; */
