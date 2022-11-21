@@ -3,7 +3,7 @@
     <div class="column-1">
       <div class="container bar">
         <div class="titleSpecific">
-          <h3 style="color: white">Alternative Software</h3>
+          <h3 style="color: white; font-weight: 900;">Alternative Software</h3>
         </div>
         <p style="text-align: center">
           This page is dedicated to search an alternative software.
@@ -254,7 +254,6 @@ h2 {
 #alternative .program-card__title {
   color: black;
 }
-
 p {
   color: white;
   font-style: normal;

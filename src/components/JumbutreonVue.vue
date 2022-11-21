@@ -159,6 +159,7 @@ export default {
   align-items: flex-start;
   margin: 0 1.5rem 0 1.5rem;
   margin-bottom: 2rem;
+  margin-top: 2.1rem;
 }
 .container-2 {
   display: flex;

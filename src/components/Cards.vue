@@ -8,10 +8,15 @@
       <div v-if="suggestions?.icon" class="program-card__icon">
         <img :src="suggestions.icon" alt="program icon" />
       </div>
-      <h3 class="program-card__code">
-        {{ program.name }}
-      </h3>
-      <!-- <p class="program-card__title">{{ program.slug }}</p> -->
+      <div class="program-card__content">
+        <div class="program-card__content__title">
+        <h3 class="program-card__title">{{ program.name }}</h3>
+        <div class="likes">{{program.like}}</div>
+      </div>
+        <p class="program-card__description">
+          {{ program.description }}
+        </p>
+    </div>
     </div>
   </div>
 </template>
@@ -55,7 +60,7 @@ export default {
 
 .program-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: fit-content;

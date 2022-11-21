@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      igor: Distros,
+      dist: Distros,
     };
   },
 
@@ -34,21 +34,22 @@ export default {
 
 <template>
   <main>
-    <JumbutreonVue :distro_search="igor" />
+    <div class="cropped-image-ellipse">
+      <img src="https://images.unsplash.com/photo-1616927366799-d4cab1b7e545?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=100"
+      alt="landingPage" />
+    </div>
+    <JumbutreonVue :distro_search="dist" />
     <DistroPage />
     <RankingPage />
   </main>
 </template>
 
 <style scoped>
-.Cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 10%;
-  margin-inline-start: 10%;
-  margin-inline-end: 10%;
-  gap: 36px;
-  justify-content: space-between;
+.cropped-image-ellipse{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  clip-path: ellipse(100% 100% at right center);
+ 
 }
 </style>

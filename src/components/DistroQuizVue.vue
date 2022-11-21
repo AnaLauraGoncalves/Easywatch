@@ -432,7 +432,8 @@ export default {
 #question h3 {
   font-family: "Poppins", sans-serif;
   color: white;
-  font-size: 3vh;
+  font-size: 4vh;
+  font-weight: 900;
 }
 
 #question h3:hover {

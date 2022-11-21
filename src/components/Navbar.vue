@@ -67,8 +67,10 @@ export default {
   position: fixed;
   padding: 0;
   margin: 0;
-  width: 99vw;
+  width: 100vw;
   top: 0;
+  height: 7vw;
+  
 }
 .navbar-nav {
   margin-left: auto;

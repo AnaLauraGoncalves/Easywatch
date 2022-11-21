@@ -29,18 +29,6 @@
           </option>
         </select>
       </div>
-      <!-- <div class="label">
-        <span>Architecture</span>
-        <select v-model="selected4">
-          <option
-            v-for="(distro, index) in distros"
-            :key="index"
-            :value="distro.value"
-          >
-            {{ distro.text }}
-          </option>
-        </select>
-      </div> -->
       <div class="buttons">
         <span>&nbsp;</span>
         <span>&nbsp;</span>

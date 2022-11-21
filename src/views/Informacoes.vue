@@ -2,16 +2,10 @@
   <div class="conteiner" v-if="distro">
     <div class="conteiner-top">
       <h1>{{ distro.name }}</h1>
-      <br /><br />
+      <br />
+      <br />
     </div>
-
     <div class="conteiner-center">
-      <img
-        v-if="distro.slug"
-        style="object-fit: contain; height: 150px"
-        v-bind:src="`https://api.allorigins.win/raw?url=https://distrowatch.com/images/yvzhuwbpy/${distro.slug}.png`"
-        :alt="distro?.name"
-      />
       <div class="text-info">
         <p><span class="negrito">Baseada em:</span>{{ distro.based_ons }}</p>
         <p><span class="negrito">Arquitetura:</span></p>
@@ -22,13 +16,21 @@
         <p><span class="negrito">Popularidade:</span>{{ distro.popularity }}</p>
         <br />
       </div>
+      <div class="img">
+      <img
+        v-if="distro.slug"
+        style="object-fit: contain; height: 200px; width: 400px; "
+        v-bind:src="`https://api.allorigins.win/raw?url=https://distrowatch.com/images/yvzhuwbpy/${distro.slug}.png`"
+        :alt="distro?.name"
+      />
+      </div>
     </div>
-    <hr />
-    <br />
     <div class="conteiner-bottom">
       <p>{{ distro.about }}</p>
     </div>
   </div>
+  <div class="box-1"></div>
+  <div class="box-2"></div>
 </template>
 
 <script>
@@ -92,6 +94,8 @@ export default {
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 10%;
+  position: relative;
+  z-index: 1;
 }
 
 .conteiner-top {
@@ -110,6 +114,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin-bottom: auto;
+  background-color: #f3f3f3;
 }
 
 img {
@@ -118,6 +123,9 @@ img {
   left: auto;
   margin-top: 10px;
   object-fit: cover;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  margin-left: 50px;
 }
 .info-links {
   display: flex;
@@ -128,6 +136,7 @@ img {
 img {
   display: flex;
   flex-direction: row;
+  margin-bottom: 3rem;
 }
 
 #esquerda {
@@ -141,6 +150,8 @@ h3 {
 
 h1 {
   color: #feca05;
+  font-weight: 900;
+  margin-bottom: 2rem;
 }
 
 .text-info {
@@ -159,8 +170,28 @@ p {
   font-size: 18px;
 }
 
-hr {
-  color: aliceblue;
-  size: 20px;
+.conteiner-bottom p {
+  color: black;
+  margin: 2rem;
+}
+
+
+.box-1{
+  position: absolute;
+  width: 10rem;
+  height: 25rem;
+  background-color: #feca05;
+  z-index: 0.5;
+  bottom: 0;
+}
+
+.box-2{
+  position: absolute;
+  width:10rem;
+  height: 25rem;
+  background-color: #feca05;
+  z-index: 0.5;
+  bottom: 10%;
+  right: 0;
 }
 </style>
