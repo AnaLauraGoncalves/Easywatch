@@ -96,6 +96,7 @@ export default {
   mounted() {console.log('suggestions',this.suggestions)},
 };
 </script>
+
 <style>
 .search-container {
   display: flex;

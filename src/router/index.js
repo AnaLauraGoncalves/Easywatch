@@ -5,6 +5,7 @@ import DistroQuiz from "../views/DistroQuiz.vue";
 import RankingPage from "../components/RankingPage.vue";
 import ViewDistros from "../views/ViewDistros.vue";
 import Alternative from "./../views/Alternative.vue";
+import AboutView from "./../views/AboutView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -42,6 +43,11 @@ const router = createRouter({
       path: "/Alternative",
       name: "alternative-software",
       component: Alternative,
+    },
+    {
+      path: "/About",
+      name: "about",
+      component: AboutView,
     },
   ],
 });

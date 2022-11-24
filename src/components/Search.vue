@@ -95,6 +95,7 @@ export default {
   mounted() {},
 };
 </script>
+
 <style>
 .search-container {
   display: flex;

@@ -27,7 +27,7 @@
             <a class="nav-link" @click="go_to_alternative()">Alternatives</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link">About</a>
+            <a class="nav-link" @click="go_to_about() ">About</a>
           </li>
         </ul>
         <a
@@ -55,7 +55,7 @@ export default {
       this.$router.push({ path: "/Alternative", addToHistory: true });
     },
     go_to_about() {
-      this.$router.push({ path: "/ViewDistros", addToHistory: true });
+      this.$router.push({ path: "/About", addToHistory: true });
     },
   },
   components: { Logo, Github },

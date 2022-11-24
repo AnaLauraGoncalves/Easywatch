@@ -238,7 +238,7 @@ export default {
   z-index: 0;
 }
 
-h1 {
+#alternatives h1 {
   color: white;
   font-style: normal;
   font-size: 40px;
@@ -254,7 +254,7 @@ h2 {
 #alternative .program-card__title {
   color: black;
 }
-p {
+#alternative p{
   color: white;
   font-style: normal;
   font-size: 20px;

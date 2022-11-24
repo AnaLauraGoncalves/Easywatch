@@ -83,7 +83,7 @@ export default {
       this.selected = "All";
       this.selected2 = "All";
       this.selected3 = "All";
-      this.selected4 = "All";
+      //this.selected4 = "All";
     },
 
     emitClick(selectdArray) {

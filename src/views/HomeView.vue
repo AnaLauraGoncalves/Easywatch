@@ -46,6 +46,8 @@ export default {
 
 <style scoped>
 .cropped-image-ellipse{
+  display: flex;
+  justify-content: center;
   position: absolute;
   z-index: 1;
   right: 0;

@@ -75,4 +75,32 @@ ul .n-dot {
   body {
     place-items: center;
   }
+  @font-face{
+    font-family: 'Poppins-Bold';
+    src: url(@/assets/Poppins/Poppins-Bold.ttf);
+  }
+  @font-face{
+    font-family: 'Poppins-Regular';
+    src: url(@/assets/Poppins/Poppins-Regular.ttf);
+  }
+  @font-face{
+    font-family: 'Poppins-Medium';
+    src: url(@/assets/Poppins/Poppins-Medium.ttf);
+  }
+  h1{
+    font-family: 'Poppins-Bold';
+  }
+  h1,
+   .container-2-2{
+    font-family: 'Poppins-Medium';
+  }
+  h2{
+    font-family: 'Poppins-Medium';
+  }
+  h3{
+    font-family: 'Poppins-Medium';
+  }
+  h5{
+    font-family: 'Poppins-Medium';
+  }
 }

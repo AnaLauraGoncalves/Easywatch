@@ -2,7 +2,7 @@
   <div class="container" id="info-container">
     <!--<Ranks :distroList=distrosResultado />-->
     <div class="info" id="info">
-      <div class="text">
+      <div id="text" class="text">
         <h1>What are Linux distros?</h1>
         <br />
         <p>
@@ -73,6 +73,7 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-bottom: 5rem;
 }
 
 #info {
@@ -90,15 +91,21 @@ export default {
   margin: 15px;
 }
 
-button {
+ a.more{
   background-color: transparent;
   border-color: transparent;
   color: black;
+  text-decoration: none;
+  border-color: rgb(0, 0, 0);
+  border: 1px;
+  border-radius: 12px;
 }
 
-p {
+ #text p {
   text-align: justify;
   color: black;
+  font-style: normal;
+  font-size: 18px;
 }
 
 .row {
@@ -112,7 +119,7 @@ p {
   margin-left: 5%;
 }
 
-h1 {
+#distropage h1{
   font-size: 30px;
   font-weight: bold;
   color: black;

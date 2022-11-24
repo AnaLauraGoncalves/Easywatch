@@ -39,7 +39,7 @@
       </div>
     </div>
   </div>
-  <h1 class="title">Ranking Completo</h1>
+  <h1 class="title">Popularity Ranking</h1>
   <div v-if="aux">
     <ul class="lista">
       <li v-for="rank in ranks" :key="rank.id" class="item-margem">
@@ -55,7 +55,7 @@
     <div v-if="!aux">
       <li v-for="rank in ranks.slice(3, 10)" :key="rank.id" class="item-margem">
         <div class="item-simples" @click="openDistro(rank.name)">
-          <h1 class="nome-item">{{ rank.name }}</h1>
+          <h5 class="nome-item">{{ rank.name }}</h5>
           <h2 class="posicao-item">{{ rank.rankPosition }}º</h2>
           <h3 class="hits-item">{{ rank.hits }} acessos por dia</h3>
         </div>
