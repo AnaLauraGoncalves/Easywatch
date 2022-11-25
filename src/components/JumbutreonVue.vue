@@ -16,6 +16,7 @@
         Start Quiz
       </button>
     </div>
+    <hr />
   </div>
   <div class="container-2" id="jumb-2">
     <div class="container-2-1">
@@ -35,6 +36,7 @@
     <img
       src="https://images.unsplash.com/photo-1499914485622-a88fac536970?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=100"
       alt="linux terminal"
+      style="border-radius: 12px;"
     />
     <div class="container-2-2">
       <h1>Why use Linux?</h1>
@@ -266,7 +268,8 @@ button:hover {
   margin-top: 2%;
 }
 
-h1 {
+h1,
+.title {
   color: white;
   font-style: normal;
   font-size: 40px;

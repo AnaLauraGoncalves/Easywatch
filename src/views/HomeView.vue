@@ -52,6 +52,22 @@ export default {
   z-index: 1;
   right: 0;
   clip-path: ellipse(100% 100% at right center);
- 
 }
+
+@media (max-width: 768px) {
+  .cropped-image-ellipse{
+    padding-top: 10%;
+  }
+  .cropped-image-ellipse img{
+    width: 50%;
+    float: right;
+  }
+
+  @media (max-width: 465px) {
+    .cropped-image-ellipse img{
+      display: none;
+    }
+  }
+}
+
 </style>

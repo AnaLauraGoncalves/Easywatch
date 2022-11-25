@@ -1,5 +1,6 @@
 <template>
   <div class="container bar">
+    <Info class="info-svg" />
     <div class="titleSpecific">
       <h3 style="color: white">Search by Distribution</h3>
     </div>
@@ -42,7 +43,9 @@
 </template>
 
 <script>
+
 export default {
+
   name: "SearchBar",
 
   props: {
@@ -57,7 +60,6 @@ export default {
       selected: "All",
       selected2: "All",
       selected3: "All",
-      selected4: "All",
       arrayBasedOns: ["All"],
       arrayDesktop: ["All"],
       selectedDistros: [],
@@ -83,7 +85,6 @@ export default {
       this.selected = "All";
       this.selected2 = "All";
       this.selected3 = "All";
-      //this.selected4 = "All";
     },
 
     emitClick(selectdArray) {
@@ -111,6 +112,7 @@ export default {
 
   computed: {
     selectdArray() {
+      this.selectedDistros = [];
       for (const distro of this.distroList) {
         if (
           this.selected == "All" ||
@@ -124,12 +126,7 @@ export default {
               this.selected3 == "All" ||
               distro.desktop_environments.includes(this.selected3)
             ) {
-              if (
-                this.selected4 == "All" ||
-                distro.desktop_environments.includes(this.selected4)
-              ) {
-                this.selectedDistros.includes(distro);
-              }
+              this.selectedDistros.push(distro);
             }
           }
         }
@@ -185,6 +182,12 @@ export default {
 .body select::-webkit-scrollbar-thumb {
   background: #feca05; /* color of the tracking area */
   border-radius: 10px;
+}
+
+.info-svg {
+  fill: #ffffff;
+  width: 48px;
+  height: 48px;
 }
 
 .buttons {

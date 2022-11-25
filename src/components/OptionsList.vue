@@ -46,28 +46,16 @@ export default {
 
     data(){
       return{
-      tags: [],
       }
     },
-    
 
-    methods: {
-
+    methods:{
       tagsList(){
-       for(row in this.alternative){
-          for(tag in this.alternative[row].tags){
-            this.tags.push(this.alternative[row].tags[tag]);
-          }
-       }
-       console.log(tag);
-      },
-
-    },
-
-    computed: {
-    }
-
-                          
+        let tags = this.alternative.tags
+        let tagsList = tags.join(', ')
+        return tagsList
+      }
+    }                      
 }
 
 
@@ -75,13 +63,33 @@ export default {
 
 <style>
 
-h5{
-
-}
-
 .col-15{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding:  1rem 0;
 }
+.col-2{
+  padding: 1rem 0;
+}
+.list-group-item-text{
+  text-align: justify;
+}
+p.list-group-item-text{
+  font-size: 0.8rem;
+  color:black;
+}
+
+a:hover p{
+  color:aliceblue
+}
+
+a:hover h5{
+  color: rgb(254, 202, 5);
+  font-family: Poppins-Medium;
+}
+a:hover small{
+  color: rgb(255, 255, 255, 0.8);
+}
+
 </style>

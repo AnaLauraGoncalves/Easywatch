@@ -15,7 +15,7 @@
           />
         </form>
       </div>
-      <div class="programs-wrapper" id="programs-wrapper" v-show="clicked">
+     <!-- <div class="programs-wrapper" id="programs-wrapper" v-show="clicked">
         <div
           class="program-card"
           v-for="(program, index) in filterdPrograms"
@@ -45,7 +45,7 @@
             </h2>
           </a>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>

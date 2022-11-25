@@ -16,6 +16,7 @@ import {
   CategoryScale,
   LinearScale,
 } from "chart.js";
+import { slotFlagsText } from "@vue/shared";
 ChartJS.register(
   Title,
   Tooltip,
@@ -40,8 +41,10 @@ export default {
         labels: [],
         datasets: [
           {
+            axis: 'y',
             label: "Distribution",
             data: [],
+            fill: false,
             backgroundColor: [],
             borderColor: [],
             borderWidth: 1,
@@ -51,9 +54,47 @@ export default {
       chartOptions: {
         responsive: false,
         maintainAspectRatio: true,
+        indexAxis: 'y',
         scales: {
           y: {
             beginAtZero: true,
+            drawBorder: false,
+            grid:{
+              display: false,
+            }
+          },
+          x: {
+            drawBorder: false,
+            grid:{
+              display: false
+            }
+          }
+        },
+        animation: {
+          duration: 3000
+        },
+        
+        plugins: {
+          legend: {
+            display: slotFlagsText,
+            right: 0,
+            labels: {
+              color: "white",
+              font: 20
+            },
+          },
+          tooltip: {
+            labels:{
+              color: "white",
+              font: 20
+            },
+            enabled: true,
+            intersect: true,
+            callbacks: {
+              label: function (context) {
+                return context.dataset.label + ": " + context.formattedValue;
+              },
+            },
           },
         },
       },
@@ -76,6 +117,6 @@ export default {
 </script>
 <style>
 #result canvas {
-  max-height: 20rem;
+  max-height: 90rem;
 }
 </style>

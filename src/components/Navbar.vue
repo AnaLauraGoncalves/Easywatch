@@ -69,7 +69,7 @@ export default {
   margin: 0;
   width: 100vw;
   top: 0;
-  height: 7vw;
+  height: fit-content;
   
 }
 .navbar-nav {

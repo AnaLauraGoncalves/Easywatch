@@ -5,7 +5,7 @@
         <div class="titleSpecific">
           <h3 style="color: white; font-weight: 900;">Alternative Software</h3>
         </div>
-        <p style="text-align: center">
+        <p style="text-align: center; color:white">
           This page is dedicated to search an alternative software.
         </p>
         <div class="search-area">
@@ -22,14 +22,16 @@
 
     <div class="column-2">
       <div class="results">
-        <div v-for="(alternative, index) in alternativePrograms" :key="index">
+        <p>{{updatePrograms()}}</p>
+        <div class="options" v-for="alternative in alternativePrograms" :key="index">
           <OptionsList :alternative="alternative" />
+          <hr />
         </div>
       </div>
 
-      <div class="cards">
+      <!--<div class="cards">
         <Cards :suggestions="filtredList" :programs="programs" />
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
@@ -38,7 +40,8 @@
 import Cards from "@/components/Cards.vue";
 import Search from "@/components/SearchAlternative.vue";
 import Distros from "@/assets/allDistro.json";
-import OptionsList from "../components/OptionsList.vue";
+import OptionsList from "@/components/OptionsList.vue";
+import axios from "axios";
 
 export default {
   name: "alternative-software",
@@ -54,37 +57,30 @@ export default {
       filtredList: [],
       alternativePrograms: [],
       selected: String,
-      programs: [
-        {
-          name: "Adobe Photoshop",
-          slug: "adobe-photoshop",
-        },
-        {
-          name: "Adobe Illustrator",
-          slug: "adobe-illustrator",
-        },
-        {
-          name: "Gimp",
-          slug: "gimp",
-        },
-        {
-          name: "Microsoft Excel",
-          slug: "microsoft-excel",
-        },
-        {
-          name: "Bluestacks",
-          slug: "bluestacks",
-        },
-      ],
+      programs: [],
     };
   },
 
   methods: {
+
+    async updatePrograms(){
+      const requestURL =
+        "https://api.allorigins.win/raw?url=https://pastebin.com/raw/27E9nmDL";
+
+      this.programs = [];
+      await axios
+        .get(requestURL)
+        .then((response) => (this.programs = response?.data))
+        .catch((error) => console.log("error ->", error));
+    },
+
     getSearch(filtredList) {
       this.filtredList = filtredList;
+      console.log("filtredList", this.filtredList);
     },
     getSelected(selected) {
       this.selected = selected;
+      console.log("selected", this.selected);
     },
 
     submit() {
@@ -102,45 +98,44 @@ export default {
       }
       const url =
         `https://alternativeto.net/software/` + slug + `/?license=opensource`;
+        
       this.loadPage(url);
     },
 
     async loadPage(url) {
-      const obj = await (await fetch(url)).text();
-      let parser = new DOMParser();
-      let doc = parser.parseFromString(obj, "text/html");
-      let body = doc.body;
-      let childNodes = body.childNodes;
-      let __next = childNodes[0];
-      let childNodes2 = __next.childNodes;
-      let wrapper = childNodes2[0].innerHTML;
-      let doc2 = parser.parseFromString(wrapper, "text/html");
-      let ol = doc2.getElementsByTagName("ol")[1].childNodes;
-      let programs = [];
-      for (const program of ol) {
-        if (!program.classList.contains("in-list")) {
-          programs.push(program);
+    let obj = await (await fetch(url)).text();
+    let parser = new DOMParser();
+    let doc = parser.parseFromString(obj, "text/html");
+    let body = doc.body;
+    let childNodes = body.childNodes;
+    let __next = childNodes[0];
+    let childNodes2 = __next.childNodes;
+    let wrapper = childNodes2[1].innerHTML;
+    let doc2 = parser.parseFromString(wrapper, "text/html");
+    let ol = doc2.getElementsByTagName('ol')[1].childNodes;
+    let programs = [];
+    for(const program of ol){
+        if((!program.classList.contains('in-list'))){
+            programs.push(program);
         }
-      }
-      for (const program of programs) {
+    }
+    for(const program of programs){
         let tags = [];
+        console.log(program)
         let info = program.childNodes[0];
         let primaryInfo = info.childNodes[0];
         let description = info.childNodes[2];
         let about = description.innerText;
-        let likes =
-          primaryInfo.childNodes[0].childNodes[1].childNodes[1].innerText;
+        let likes = primaryInfo.childNodes[0].childNodes[1].childNodes[1].innerText;
         let image = primaryInfo.childNodes[0].childNodes[0].src;
-        let name =
-          primaryInfo.childNodes[1].childNodes[0].childNodes[0].innerText;
-        let ul =
-          primaryInfo.childNodes[1].childNodes[1].childNodes[0].childNodes[0];
-        for (const li of ul.childNodes) {
-          tags.push(li.innerText);
+        let name = primaryInfo.childNodes[1].childNodes[0].childNodes[0].innerText;
+        let ul = primaryInfo.childNodes[1].childNodes[4].childNodes[0].childNodes[0];
+        for(const li of ul.childNodes){
+            tags.push(li.innerText);
         }
         let obj = this.createProgram(name, about, image, likes, tags);
         this.alternativePrograms.push(obj);
-      }
+    }
     },
 
     createProgram(name, about, image, likes, tags) {
@@ -156,7 +151,6 @@ export default {
     },
   },
 
-  mounted() {},
 };
 </script>
 
@@ -214,8 +208,8 @@ export default {
   min-width: 500px;
   width: 70%;
   margin: 0 auto;
-  padding: 1rem;
-  border-radius: 10px;
+  border-radius: 15px;
+  margin-top: 2rem;
 }
 
 #alternative .search-area {
@@ -232,6 +226,14 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+}
+
+.results{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .cards .programs-wrapper {
@@ -255,7 +257,6 @@ h2 {
   color: black;
 }
 #alternative p{
-  color: white;
   font-style: normal;
   font-size: 20px;
 }

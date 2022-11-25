@@ -3,10 +3,10 @@
     <div class="corpo">
       <div id="question" class="titleSpecific">
         <h3>
-          {{ counter < 8 ? questionQuiz[counter]?.title : "Resultado" }}
+          {{ counter < 10 ? questionQuiz[counter]?.title : "Resultado" }}
         </h3>
       </div>
-      <div id="answer" v-if="counter <= 7">
+      <div id="answer" v-if="counter <= 9">
         <div v-if="questionQuiz[counter]?.img === true">
           <img
             id="img"
@@ -30,23 +30,31 @@
         </div>
         <span class="empty" v-if="EmptyAnswer">Selecione uma opção*</span>
       </div>
-      <div id="result" v-if="counter === 8">
+      <div id="result" v-if="counter === 10">
         <DistroResult
           :distroList="distrosResultado"
           v-model:propName="distrosResultado"
         />
+        <!--<div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Distribuição recomendada</h4>
+            <h5 class="card-name">{{ distrosResultado[0]?.distroName }}</h5>
+            <p class="card-text">
+            </p>
+            </div>
+        </div>-->
       </div>
       <div id="botao">
-        <button v-if="counter > 0 && counter < 8" id="back" @click="back">
+        <button v-if="counter > 0 && counter < 10" id="back" @click="back">
           Voltar
         </button>
-        <button v-if="counter >= 0 && counter < 7" id="submit" @click="next">
+        <button v-if="counter >= 0 && counter < 9" id="submit" @click="next">
           {{ questionQuiz[counter]?.button }}
         </button>
-        <button v-if="counter == 7" id="submit" @click="analyzeData">
+        <button v-if="counter == 9" id="submit" @click="analyzeData">
           {{ questionQuiz[counter]?.button }}
         </button>
-        <button v-if="counter == 8" id="submit" @click="next">Reiniciar</button>
+        <button v-if="counter == 10" id="submit" @click="next">Reiniciar</button>
       </div>
     </div>
   </div>
@@ -57,12 +65,16 @@ import axios from "axios";
 import DistroResult from "./DistroResult.vue";
 export default {
   name: "DistroQuizVue",
+
+  props: {
+    distros: [],
+  },
   data() {
     return {
       EmptyAnswer: false,
       questionQuiz: [
         {
-          title: "Questionário sobre distribuições Linux:",
+          title: "Descubra qual distribuição Linux é a melhor para você!",
           img: true,
           button: "Começar",
         },
@@ -88,20 +100,87 @@ export default {
               text: "Linux",
             },
             {
-              base: "outher",
+              base: "other",
               name: "os",
               text: "Outro",
             },
           ],
         },
         {
-          title:
-            "2. Você tem preferência sobre qual base deveria ser o seu novo linux?",
+        title: "2. Qual o seu nível de conhecimento em computação?",
           img: false,
           button: "Próximo",
           options: [
             {
-              base: "debiam",
+              base: "advanced",
+              name: "advanced",
+              text: "Possuo conhecimento avançado",
+            },
+            {
+              base: "intermediate",
+              name: "advanced",
+              text: "Tenho nivel de conhecimento intermediário ",
+            },
+            {
+              base: "beginner",
+              name: "advanced",
+              text: "Não possuo muito conhecimento sobre a área",
+            },
+          ],
+        },
+        {
+          title:
+            "3. Seu computador é mais velho ou mais novo? (A partir de 2010)",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "old",
+              name: "age",
+              text: "Mais velho (Antes de 2010)",
+            },
+            {
+              base: "new",
+              name: "age",
+              text: "Mais novo (A partir de 2010)",
+            },
+            {
+              base: "dontknow",
+              name: "age",
+              text: "Não sei",
+            },
+          ],
+        },
+        {
+          title: "4. Quantas configurações você deseja modificar durante a instalação? ",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "basic",
+              name: "installation",
+              text: "Perfiro que o sistema já tenha todas as configurações pré-definidas",
+            },
+            {
+              base: "intermediate",
+              name: "installation",
+              text: "Quero configurar a intalação utilizando a interface grafica",
+            },
+            {
+              base: "avanced",
+              name: "installation",
+              text: "Quero configurar o maximo possivel a instalação via terminal",
+            },
+          ],
+        },
+                {
+          title:
+            "5. Você tem preferência sobre qual base deveria ser o seu novo linux?",
+          img: false,
+          button: "Próximo",
+          options: [
+            {
+              base: "debian",
               name: "base",
               text: "Debian",
             },
@@ -116,41 +195,19 @@ export default {
               text: "Arch",
             },
             {
-              base: "outher",
+              base: "other",
               name: "base",
               text: "Outro",
             },
-          ],
-        },
-        {
-          title: "3. Você tem preferência a respeito do SystemD?",
-          img: false,
-          button: "Próximo",
-          options: [
             {
-              base: "gnome",
-              name: "desktop",
-              text: "Gnome",
-            },
-            {
-              base: "kde",
-              name: "desktop",
-              text: "KDE",
-            },
-            {
-              base: "xfce",
-              name: "desktop",
-              text: "Xfce",
-            },
-            {
-              base: "outher",
-              name: "desktop",
-              text: "Outro",
+              base: "dontknow",
+              name: "base",
+              text: "Não sei",
             },
           ],
         },
         {
-          title: "4. Você tem preferência a respeito do SystemD?",
+          title: "6. Você tem preferência a respeito do SystemD?",
           img: false,
           button: "Próximo",
           options: [
@@ -162,7 +219,7 @@ export default {
             {
               base: "no",
               name: "systemd",
-              text: "Não, não quero ter",
+              text: "Prefiro não quero ter",
             },
             {
               base: "dontcare",
@@ -178,7 +235,7 @@ export default {
         },
         {
           title:
-            "5. Você deseja um sistema com interface gráfica (como Windows ou Mac, por exemplo)?",
+            "7. Você deseja um sistema com interface gráfica?",
           img: false,
           button: "Próximo",
           options: [
@@ -200,29 +257,29 @@ export default {
           ],
         },
         {
-          title: "6. Você é um usuário avançado de computadores?",
+          title: "8. O quão customizavel você gostaria que fosse sua interface grafica?",
           img: false,
           button: "Próximo",
           options: [
             {
-              base: "yes",
-              name: "advanced",
-              text: "Sim, sou um usuário avançado",
+              base: "customizable",
+              name: "desktop",
+              text: "Gostaria de uma interface grafica totalmente customizavel",
             },
             {
-              base: "no",
-              name: "advanced",
-              text: "Não, não sou um usuário avançado",
+              base: "notcustomizable",
+              name: "desktop",
+              text: "Não me importo muito com a interface grafica",
             },
             {
-              base: "mid",
-              name: "advanced",
-              text: "Intermediario",
+              base: "notgui",
+              name: "desktop",
+              text: "Não quero ter uma interface grafica",
             },
           ],
         },
         {
-          title: "7. Você deseja atualizações constantes ou mais estabilidade?",
+          title: "9. Prefere um sistema operacional com atualizações mais rapidas ou um sistema mais estavel, porém com atualzações menos frequentes?",
           img: false,
           button: "Ver resultados",
           options: [
@@ -259,6 +316,8 @@ export default {
         gui: null,
         advanced: null,
         updates: null,
+        installation: null,
+        age: null,
       },
     };
   },
@@ -310,7 +369,7 @@ export default {
 
     async analyzeData() {
       const requestURL =
-        "https://api.allorigins.win/raw?url=https://pastebin.com/raw/wG6f0ynp";
+        "https://api.allorigins.win/raw?url=https://pastebin.com/raw/iSjk4Qbb";
 
       let dados = [];
       await axios
@@ -331,47 +390,54 @@ export default {
       for (const dist of distros) {
         let score = 0;
         if (this.userAnswers.base == dist.based_on) {
-          score += parseFloat(defaultValues.based_on); //peso da questão
-        }
+          score += parseFloat(defaultValues.based_on);
+        } //ok
+
         if (this.userAnswers.systemd == "yes" && dist.systemd == true) {
           score += parseFloat(defaultValues.systemd);
         } else if (this.userAnswers.systemd == "no" && dist.systemd == false) {
           score += parseFloat(defaultValues.systemd);
         } else if (
-          this.userAnswers.systemd == "dontknow" &&
-          dist.systemd == true
-        ) {
+          this.userAnswers.systemd == "dontknow" && dist.systemd == true) {
           score += parseFloat(defaultValues.systemd) * 0.5;
-        }
+        } //ok
+        
+        if (this.userAnswers.installation == "basic" && dist.installer == true) {
+          score += parseFloat(defaultValues.installer);
+        } else if (this.userAnswers.installation == "avanced" && dist.installer == false) {
+          score += parseFloat(defaultValues.installer);
+        } else if (
+          this.userAnswers.installation == "intermediate" && dist.installer == true) {
+          score += parseFloat(defaultValues.installer) * 0.5;
+        } //ok
+
         if (this.userAnswers.gui == "no" && dist.windowmanager == "no") {
           score += parseFloat(defaultValues.windowmanager);
-        } else if (
-          this.userAnswers.gui == "yes" &&
-          dist.windowmanager == "no"
-        ) {
+        } else if (this.userAnswers.gui == "yes" && dist.windowmanager == "no") {
           score -= parseFloat(defaultValues.windowmanager); //perde pontos
+        } 
+
+        if (this.userAnswers.desktop == "customizable" && dist.windowmanager == "customizable") {
+          score += parseFloat(defaultValues.windowmanager) * 0.5;
+        }else if (
+          this.userAnswers.desktop == "dontcare" && dist.windowmanager == "customizable") {
+          score += parseFloat(defaultValues.windowmanager) * 0.5 * 0.5;
+        }else if (
+          this.userAnswers.desktop == "notgui" && !dist.windowmanager == "no") {
+          score -= parseFloat(defaultValues.windowmanager) * 0.5 * 0.5;
         }
-        if (this.userAnswers.desktop == dist.windowmanager) {
-          score += parseFloat(defaultValues.windowmanager);
-        }
-        if (this.userAnswers.advanced == "no") {
-          score +=
-            parseFloat(defaultValues.user_friendly) *
-            parseFloat(dist.user_friendly);
-        } else if (this.userAnswers.advanced == "mid") {
-          score +=
-            parseFloat(defaultValues.user_friendly) *
-            parseFloat(dist.user_friendly) *
-            0.5;
-        }
+
+        if (this.userAnswers.advanced == "beginner") {
+          score += parseFloat(defaultValues.user_friendly) * parseFloat(dist.user_friendly);
+        } else if (this.userAnswers.advanced == "intermediate") {
+          score += parseFloat(defaultValues.user_friendly) * parseFloat(dist.user_friendly) * 0.5;
+        } 
+
         if (this.userAnswers.updates == "yes" && dist.rolling_release == true) {
           score += parseFloat(defaultValues.rolling_release);
-        } else if (
-          this.userAnswers.updates == "no" &&
-          dist.rolling_release == false
-        ) {
+        } else if (this.userAnswers.updates == "no" && dist.rolling_release == false) {
           score += parseFloat(defaultValues.rolling_release);
-        }
+        } 
 
         distroScore.distroName = dist.name;
         distroScore.score = score;
