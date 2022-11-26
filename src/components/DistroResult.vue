@@ -48,6 +48,7 @@ export default {
             backgroundColor: [],
             borderColor: [],
             borderWidth: 1,
+            fontColor: '#fff'
           },
         ],
       },
@@ -61,12 +62,29 @@ export default {
             drawBorder: false,
             grid:{
               display: false,
+             
+            },
+            ticks:{
+            color: '#fff',
+            font: {
+              size: 16,
+              weight: 'bold',
+          
+            },
             }
           },
+ 
           x: {
             drawBorder: false,
             grid:{
-              display: false
+              display: false,
+            },
+            ticks:{
+            color: '#fff',
+            font: {
+              size: 16,
+          
+            },
             }
           }
         },
@@ -118,5 +136,6 @@ export default {
 <style>
 #result canvas {
   max-height: 90rem;
+  max-width: 100rem;
 }
 </style>

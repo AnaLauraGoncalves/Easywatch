@@ -3,7 +3,7 @@
     <div class="corpo">
       <div id="question" class="titleSpecific">
         <h3>
-          {{ counter < 10 ? questionQuiz[counter]?.title : "Resultado" }}
+          {{ counter < 10 ? questionQuiz[counter]?.title : "Results" }}
         </h3>
       </div>
       <div id="answer" v-if="counter <= 9">
@@ -28,7 +28,7 @@
           />
           <label :for="option?.base">{{ option?.text }}</label>
         </div>
-        <span class="empty" v-if="EmptyAnswer">Selecione uma opção*</span>
+        <span class="empty" v-if="EmptyAnswer">Select an option*</span>
       </div>
       <div id="result" v-if="counter === 10">
         <DistroResult
@@ -47,7 +47,7 @@
       </div>
       <div id="botao">
         <button v-if="counter > 0 && counter < 10" id="back" @click="back">
-          Voltar
+          Return
         </button>
         <button v-if="counter >= 0 && counter < 9" id="submit" @click="next">
           {{ questionQuiz[counter]?.button }}
@@ -55,7 +55,7 @@
         <button v-if="counter == 9" id="submit" @click="analyzeData">
           {{ questionQuiz[counter]?.button }}
         </button>
-        <button v-if="counter == 10" id="submit" @click="next">Reiniciar</button>
+        <button v-if="counter == 10" id="submit" @click="next">Restart</button>
       </div>
     </div>
   </div>
@@ -75,20 +75,20 @@ export default {
       EmptyAnswer: false,
       questionQuiz: [
         {
-          title: "Descubra qual distribuição Linux é a melhor para você!",
+          title: "Find out which Linux distribution is best for you!",
           img: true,
-          button: "Começar",
+          button: "Start",
         },
         {
-          title: "1. Qual o seu sistema operacional atual?",
+          title: "1. What is your current operating system?",
           img: false,
-          button: "Próximo",
+          button: "Next",
           options: [
             {
               base: "windows",
               name: "os",
               text: "Windows",
-              button: "Próximo",
+              button: "Next",
             },
             {
               base: "mac",
@@ -103,82 +103,82 @@ export default {
             {
               base: "other",
               name: "os",
-              text: "Outro",
+              text: "Other",
             },
           ],
         },
         {
-        title: "2. Qual o seu nível de conhecimento em computação?",
+        title: "2. What is your level of computer knowledge?",
           img: false,
-          button: "Próximo",
+          button: "Next",
           options: [
             {
               base: "advanced",
               name: "advanced",
-              text: "Possuo conhecimento avançado",
+              text: "I have advanced knowledge",
             },
             {
               base: "intermediate",
               name: "advanced",
-              text: "Tenho nivel de conhecimento intermediário ",
+              text: "I have an intermediate level of knowledge",
             },
             {
               base: "beginner",
               name: "advanced",
-              text: "Não possuo muito conhecimento sobre a área",
+              text: "I don't have much knowledge about this",
             },
           ],
         },
         {
           title:
-            "3. Seu computador é mais velho ou mais novo? (A partir de 2010)",
+            "3. Is your computer older or newer? (As of 2010)",
           img: false,
-          button: "Próximo",
+          button: "Next",
           options: [
             {
               base: "old",
               name: "age",
-              text: "Mais velho (Antes de 2010)",
+              text: "Older (Before 2010)",
             },
             {
               base: "new",
               name: "age",
-              text: "Mais novo (A partir de 2010)",
+              text: "Younger (As of 2010)",
             },
             {
               base: "dontknow",
               name: "age",
-              text: "Não sei",
+              text: "I don't know",
             },
           ],
         },
         {
-          title: "4. Quantas configurações você deseja modificar durante a instalação? ",
+          title: "4. How many settings do you want to modify during installation? ",
           img: false,
-          button: "Próximo",
+          button: "Next",
           options: [
             {
               base: "basic",
               name: "installation",
-              text: "Perfiro que o sistema já tenha todas as configurações pré-definidas",
+              text: "I prefer that the system already has all the predefined settings",
             },
             {
               base: "intermediate",
               name: "installation",
-              text: "Quero configurar a intalação utilizando a interface grafica",
+              text: "I want to configure the installation using the graphical interface",
             },
             {
               base: "avanced",
               name: "installation",
-              text: "Quero configurar o maximo possivel a instalação via terminal",
+              text: "I want to be able to configure as much as possible the installation via terminal",
             },
           ],
         },
                 {
           title:
-            "5. Você tem preferência sobre qual base deveria ser o seu novo linux?",
+            "5. Do you have a preference on which base your new linux should be?",
           img: false,
-          button: "Próximo",
+          button: "Next",
           options: [
             {
               base: "debian",
@@ -198,106 +198,101 @@ export default {
             {
               base: "other",
               name: "base",
-              text: "Outro",
+              text: "Other",
             },
             {
               base: "dontknow",
               name: "base",
-              text: "Não sei",
+              text: "I don't know",
             },
           ],
         },
         {
-          title: "6. Você tem preferência a respeito do SystemD?",
+          title: "6. Some distributions use services to improve the user experience that may affect your privacy. Would you like to have these services?",
           img: false,
-          button: "Próximo",
+          button: "Next",
           options: [
             {
               base: "yes",
               name: "systemd",
-              text: "Sim, desejo ter SystemD",
+              text: "A good user experience is the most important to me",
             },
             {
               base: "no",
               name: "systemd",
-              text: "Prefiro não quero ter",
+              text: "Having more privacy is more important to me.",
             },
             {
               base: "dontcare",
               name: "systemd",
-              text: "Não me importo",
-            },
-            {
-              base: "dontknow",
-              name: "systemd",
-              text: "Não sei o que é SystemD",
+              text: "I don't care",
             },
           ],
         },
         {
           title:
-            "7. Você deseja um sistema com interface gráfica?",
+            "7. Do you want a system with a graphical interface? (it's the space where the user can interact with the program. This can include display screens, a mouse, keyboards, and the appearance of a desktop. Without this, everything must be done via command lines via a terminal)",
           img: false,
-          button: "Próximo",
+          button: "Next",
           options: [
             {
               base: "yes",
               name: "gui",
-              text: "Sim, desejo ter interface gráfica",
+              text: "Yes, I want to have a graphical interface",
             },
             {
               base: "no",
               name: "gui",
-              text: "Não, não quero ter gráfica",
+              text: "No, I don't want to have graphics",
             },
             {
               base: "dontcare",
               name: "gui",
-              text: "Não me importo",
+              text: "I don't care",
             },
           ],
         },
         {
-          title: "8. O quão customizavel você gostaria que fosse sua interface grafica?",
+          title: "8. How customizable would you like your graphical interface to be?",
           img: false,
-          button: "Próximo",
+          button: "Next",
           options: [
             {
               base: "customizable",
               name: "desktop",
-              text: "Gostaria de uma interface grafica totalmente customizavel",
+              text: "I would like a fully customizable graphical interface",
             },
             {
               base: "notcustomizable",
               name: "desktop",
-              text: "Não me importo muito com a interface grafica",
+              text: "I don't care much about the type of graphical interface",
             },
             {
               base: "notgui",
               name: "desktop",
-              text: "Não quero ter uma interface grafica",
+              text: "I don't want to have a graphical interface",
             },
           ],
         },
         {
-          title: "9. Prefere um sistema operacional com atualizações mais rapidas ou um sistema mais estavel, porém com atualzações menos frequentes?",
+          title: "9. Do you prefer an operating system with faster updates or a more stable system with less frequent updates?",
           img: false,
-          button: "Ver resultados",
+          button: "Results",
           options: [
             {
               base: "yes",
               name: "updates",
-              text: "Sim, desejo atualizações constantes",
+              text: "Yes, I want constant updates",
             },
             {
               base: "no",
               name: "updates",
-              text: "Não, desejo mais estabilidade",
+              text: "No, I want more stability",
             },
             {
               base: "dontcare",
               name: "updates",
-              text: "Não me importo",
+              text: "I don't care",
             },
           ],
         },
@@ -617,6 +612,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 10%;
+  margin-top: 5%;
 }
 
 #img {

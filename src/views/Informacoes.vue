@@ -19,7 +19,7 @@
       <div class="img">
       <img
         v-if="distro.slug"
-        style="object-fit: contain; height: 200px; width: 400px; "
+        
         v-bind:src="`https://api.allorigins.win/raw?url=https://distrowatch.com/images/yvzhuwbpy/${distro.slug}.png`"
         :alt="distro?.name"
       />
@@ -118,14 +118,13 @@ export default {
 }
 
 img {
-  width: 500px;
-  height: 150px;
-  left: auto;
-  margin-top: 10px;
+  width: 200px;
+  height: 170px;
   object-fit: cover;
-  background-color: rgb(255, 255, 255);
   border-radius: 12px;
   margin-left: 50px;
+  margin-right: 9rem;
+  margin-bottom: 2rem;
 }
 .info-links {
   display: flex;
