@@ -39,7 +39,7 @@
             </div>
             <h2
               class="program-card__title"
-              style="margin-bottom: 0; padding-bottom: 0; color: black"
+              style="margin-bottom: 0; padding-bottom: 0; color: black; font-size: 25px;"
             >
               {{ program.name }}
             </h2>

@@ -21,7 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" @click="go_to_view()">View Distros</a>
+            <a class="nav-link" @click="go_to_view()">Search</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" @click="go_to_alternative()">Alternatives</a>
@@ -70,6 +70,7 @@ export default {
   width: 100vw;
   top: 0;
   height: fit-content;
+  min-height: 4.3rem;
   
 }
 .navbar-nav {

@@ -157,7 +157,7 @@ export default {
 
 .programs-wrapper {
   z-index: 1;
-  height: 300px;
+  height: 80%;
   overflow-x: hidden;
   position: absolute;
   background-color: #f3f3f3;

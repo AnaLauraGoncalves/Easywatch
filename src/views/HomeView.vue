@@ -2,7 +2,6 @@
 import JumbutreonVue from "@/components/JumbutreonVue.vue";
 import Distros from "@/assets/allDistro.json";
 import RankingPage from "@/components/RankingPage.vue";
-import DistroPage from "@/components/DistroPage.vue";
 import { createMemoryHistory } from "vue-router";
 </script>
 
@@ -12,7 +11,6 @@ export default {
   components: {
     JumbutreonVue,
     RankingPage,
-    DistroPage,
   },
   data() {
     return {
@@ -36,10 +34,15 @@ export default {
   <main>
     <div class="cropped-image-ellipse">
       <img src="https://images.unsplash.com/photo-1616927366799-d4cab1b7e545?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=100"
-      alt="landingPage" />
+      alt="EasyWatch" 
+      style="
+        object-fit: cover;
+        padding: 0;
+        height: 35rem;
+        width: 100%;
+      "/>
     </div>
     <JumbutreonVue :distro_search="dist" />
-    <DistroPage />
     <RankingPage />
   </main>
 </template>

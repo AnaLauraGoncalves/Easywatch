@@ -54,14 +54,55 @@
       </p>
     </div>
   </div>
+  <div class="container-2" id="info-container">
+    <div class="info" id="info">
+      <div id="text" class="text">
+        <h1>What are Linux distros?</h1>
+        <br />
+        <p>
+          You might be wondering: Why are there so many different “Linux”? What
+          changes from one “version” to another? And which one is better? Well,
+          such questions are inevitable when making the decision to change to
+          Linux and finding the answers can be a difficult research process.
+          Therefore, we aim to bring some basic concepts in a simple way to
+          clarify such questions.
+        </p>
+        <p>
+          First of all, it is necessary to explain that Linux itself is just the
+          Kernel, that is, the core of an operating system that connects the
+          physical part to the machine's programs. To exemplify, when we open an
+          application it sends and receives data that are translated to the PC
+          components. However, this alone is not enough to meet all users' needs
+          and that is where Linux distros arise.
+        </p>
+        <p v-if="aux">
+          In practice, these distributions can be classified as operating
+          systems based on Linux, as it can be freely accessed on the internet
+          (which is called Open Source). Each one has its peculiarities, such
+          as, for example, Arch Linux is a rolling release system and uses the
+          "pacman" package manager while Debian is more stable, having fewer
+          updates and uses the apt package manager . Therefore, the choice of
+          the best distro varies according to the user's needs. As already
+          mentioned, if there is a need for an operating system with frequent
+          updates, distros such as Arch and Fedora are more suitable, but if
+          stability is a higher requirement, Debian is a better choice.
+        </p>
+        <br />
+        <a @click="aux = !aux" class="more">Read more</a><br />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-//import Search from './Search.vue';
 
 export default {
   name: "jumbotron-vue",
-
+  data() {
+    return {
+      aux: false,
+    };
+  },
   methods: {
     go_to_info() {
       this.$router.push("/Informacoes");
@@ -70,7 +111,6 @@ export default {
       this.$router.push("/Quiz");
     },
   },
-
   props: {
     distro_search: Array,
   },
@@ -187,11 +227,13 @@ export default {
   border-left: 0.5vh solid #feca05;
 }
 .container-2 img {
-  height: 500px;
-  width: 90%;
+  height: 400px;
+  width: 95%;
   text-align: center;
   object-fit: cover;
   margin: 0 3.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   padding: 0;
 }
 .container-2 .container-2-1 p {
@@ -210,6 +252,75 @@ export default {
   text-align: left;
   margin-right: 5%;
   margin-left: 4.5rem;
+}
+@media (max-width: 465px) {
+  #info-container.container {
+    display: grid;
+    padding: 0;
+    margin: 0;
+  }
+  #info-container.container .text {
+    padding: 1rem;
+    margin: 0;
+  }
+}
+#info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5rem;
+  margin: 0;
+}
+
+#info {
+  border-radius: 10px;
+  background-color: rgba(254, 202, 5, 100);
+  width: 100%;
+  margin: 0 1.4rem 0 1.5rem;
+}
+
+#info h1{
+  color: black;
+}
+
+.text {
+  padding: 10px;
+  margin: 15px;
+}
+
+ a.more{
+  background-color: transparent;
+  border-color: transparent;
+  color: black;
+  text-decoration: none;
+  border-color: rgb(0, 0, 0);
+  border: 1px;
+  border-radius: 12px;
+}
+
+ #text p {
+  text-align: justify;
+  color: black;
+  font-style: normal;
+  font-size: 20px;
+}
+#distropage h1{
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+.more {
+  color: white;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background-color: #1d2f3b;
+}
+.more:hover {
+  color: white;
+  border-radius: 10px;
+  background-color: #1d2f3b95;
 }
 .title {
   display: flex;
@@ -254,13 +365,6 @@ button:hover {
   text-align: justify;
 }
 
-.search {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 15px;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -283,5 +387,6 @@ h2 {
 
 p {
   color: azure;
+  font-size: 22px ;
 }
 </style>

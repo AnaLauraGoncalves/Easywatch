@@ -10,6 +10,7 @@
           <div class="col-15">
             <h5 class="list-group-item-heading">{{alternative.name}}</h5>
             <div class="likes">
+              <Github class="github-svg" />
               <small class="likes">{{alternative.likes}}</small>
             </div>
           </div>
@@ -36,10 +37,13 @@
 </template>
 
 <script>
+import Github from "./like_svg.vue";
 
 export default {
     name: "options-software",
-
+    components: {
+      Github,
+    },
     props:{
       alternative: Array,
     },
@@ -55,7 +59,8 @@ export default {
         let tagsList = tags.join(', ')
         return tagsList
       }
-    }                      
+    }, 
+                     
 }
 
 
@@ -63,6 +68,12 @@ export default {
 
 <style>
 
+.github-svg {
+  fill: #000;
+  margin: 0.4rem;
+  width: 25px;
+  height: 25px;
+}
 .col-15{
   display: flex;
   flex-direction: row;
@@ -90,6 +101,10 @@ a:hover h5{
 }
 a:hover small{
   color: rgb(255, 255, 255, 0.8);
+}
+
+a:hover .github-svg{
+  fill: rgb(254, 202, 5);
 }
 
 </style>

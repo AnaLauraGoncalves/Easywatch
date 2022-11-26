@@ -10,8 +10,10 @@
       </div>
       <div class="program-card__content">
         <div class="program-card__content__title">
-        <h3 class="program-card__title">{{ program.name }}</h3>
-        <div class="likes">{{program.like}}</div>
+        <h3 class="program-card__title">{{ program.name }}</h3>   
+        <div class="likes">     
+          {{program.like}}
+        </div>
       </div>
         <p class="program-card__description">
           {{ program.description }}
@@ -24,6 +26,7 @@
 <script>
 export default {
   name: "Page-Card",
+  
   props: {
     suggestions: Array,
     programs: Array,
@@ -65,6 +68,7 @@ export default {
   justify-content: center;
   height: fit-content;
   cursor: pointer;
+  padding: 0.5rem;
 }
 .program-card__title {
   color: rgb(0, 0, 0);

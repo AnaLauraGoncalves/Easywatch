@@ -9,7 +9,6 @@
           This page is dedicated to search an alternative software.
         </p>
         <div class="search-area">
-          <!-- <h2>Search for an Alternative</h2> -->
           <Search
             :suggestions="programs"
             @emit-programs="getSearch"
@@ -22,16 +21,12 @@
 
     <div class="column-2">
       <div class="results">
-        <p>{{updatePrograms()}}</p>
+        <p>{{}}</p>
         <div class="options" v-for="alternative in alternativePrograms" :key="index">
           <OptionsList :alternative="alternative" />
           <hr />
         </div>
       </div>
-
-      <!--<div class="cards">
-        <Cards :suggestions="filtredList" :programs="programs" />
-      </div>-->
     </div>
   </div>
 </template>
@@ -41,7 +36,7 @@ import Cards from "@/components/Cards.vue";
 import Search from "@/components/SearchAlternative.vue";
 import Distros from "@/assets/allDistro.json";
 import OptionsList from "@/components/OptionsList.vue";
-import axios from "axios";
+import Github from "@/components/info_svg.vue";
 
 export default {
   name: "alternative-software",
@@ -49,6 +44,7 @@ export default {
     Cards,
     Search,
     OptionsList,
+    Github
   },
 
   data() {
@@ -57,13 +53,83 @@ export default {
       filtredList: [],
       alternativePrograms: [],
       selected: String,
-      programs: [],
+      programs: [
+      {
+          name: "Adobe Photoshop",
+          slug: "adobe-photoshop",
+        },
+        {
+          name: "Adobe Illustrator",
+          slug: "adobe-illustrator",
+        },
+        {
+          name: "Gimp",
+          slug: "gimp",
+        },
+        {
+          name: "Microsoft Excel",
+          slug: "microsoft-excel",
+        },
+        {
+          name: "Bluestacks",
+          slug: "bluestacks",
+        },
+        {
+          name: "Discord",
+          slug: "discord",
+        },
+        {
+          name: "Paint",
+          slug: "paint",
+        },
+        {
+          name: "Audacity",
+          slug: "audacity",
+        },
+        {
+          name: "Spotify",
+          slug: "spotify",
+        },
+        {
+          name: "Visual Studio Code",
+          slug: "visual-studio-code",
+        },
+        {
+          name: "Z-Library",
+          slug: "z-lib",
+        },
+        {
+          name: "Netflix",
+          slug: "netflix",
+        },
+        {
+          name: "Microsoft Word",
+          slug: "microsoft-word",
+        },
+        {
+          name: "Adobe Acrobat Reader",
+          slug: "adobe-reader",
+        },
+        {
+          name: "Canva",
+          slug: "canva",
+        },
+        {
+          name: "Microsoft Excel",
+          slug: "microsoft-excel",
+        },
+        {
+          name: "WinRAR",
+          slug: "winrar",
+        },
+   
+      ],
     };
   },
 
   methods: {
 
-    async updatePrograms(){
+    /*async updatePrograms(){
       const requestURL =
         "https://api.allorigins.win/raw?url=https://pastebin.com/raw/27E9nmDL";
 
@@ -72,7 +138,7 @@ export default {
         .get(requestURL)
         .then((response) => (this.programs = response?.data))
         .catch((error) => console.log("error ->", error));
-    },
+    },*/
 
     getSearch(filtredList) {
       this.filtredList = filtredList;
@@ -155,6 +221,7 @@ export default {
 </script>
 
 <style>
+
 @media (max-width: 465px) {
   #alternative .column-1 {
     min-width: 338px;

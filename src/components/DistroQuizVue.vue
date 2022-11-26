@@ -35,11 +35,12 @@
           :distroList="distrosResultado"
           v-model:propName="distrosResultado"
         />
-        <!--<div class="card">
-          <div class="card-body">
+       <!-- <div class="card">
+          <div class="card-body" >
             <h4 class="card-title">Distribuição recomendada</h4>
             <h5 class="card-name">{{ distrosResultado[0]?.distroName }}</h5>
             <p class="card-text">
+              
             </p>
             </div>
         </div>-->
@@ -323,6 +324,16 @@ export default {
   },
   components: {
     DistroResult,
+  },
+  computed:{
+    description(){
+        for(distro in distros){
+            if(distro.name == distrosResultado[0]?.distroName ){
+                return distro.about
+            }
+            return "error"
+        }
+      }
   },
   methods: {
     cleanEmpty() {

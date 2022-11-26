@@ -1,4 +1,7 @@
 <template>
+  <div class="title" id="title">
+    <h1 class="title">Popularity Ranking</h1>
+  </div>
   <div class="bigThree">
     <div class="item silver" @click="openDistro(ranks[1].name)">
       <div>
@@ -10,7 +13,7 @@
         <!-- <p>{{ranks[1].about}}</p>-->
       </div>
       <div>
-        <h2>{{ ranks[1].rankPosition }}º</h2>
+        <h2 style="color:black">{{ ranks[1].rankPosition }}º</h2>
         <h3>{{ ranks[1].hits }} acessos por dia</h3>
       </div>
     </div>
@@ -21,25 +24,24 @@
         <!-- <p>{{ranks[0].about}}</p>-->
       </div>
       <div>
-        <h2>{{ ranks[0].rankPosition }}º</h2>
+        <h2 style="color:black">{{ ranks[0].rankPosition }}º</h2>
         <h3>{{ ranks[0].hits }} acessos por dia</h3>
       </div>
     </div>
     <div class="item copper" @click="openDistro(ranks[2].name)">
       <div>
-        <h1 style="color: black">{{ ranks[2].name }}</h1>
+        <h1 style="color:black">{{ ranks[2].name }}</h1>
         <div>
           <img v-if="images[2]" :src="images[2]" alt="imagem distro 3" />
         </div>
         <!--<p>{{ranks[2].about}}</p>-->
       </div>
       <div>
-        <h2>{{ ranks[2].rankPosition }}º</h2>
+        <h2 style="color:black">{{ ranks[2].rankPosition }}º</h2>
         <h3>{{ ranks[2].hits }} acessos por dia</h3>
       </div>
     </div>
   </div>
-  <h1 class="title">Popularity Ranking</h1>
   <div v-if="aux">
     <ul class="lista">
       <li v-for="rank in ranks" :key="rank.id" class="item-margem">
@@ -186,7 +188,7 @@ export default {
   justify-content: space-between;
   gap: 1em;
   padding: 2em;
-  margin-bottom: 7.2rem;
+  margin-bottom: 2rem;
 }
 
 .gold:hover,
@@ -263,9 +265,10 @@ export default {
 }
 
 .title {
-  text-align: center;
-  margin: 1em;
+  text-align: left;
   color: white;
+  margin: 1.5rem;
+  padding: 1rem;
 }
 .lista {
   color: white;
@@ -309,6 +312,13 @@ export default {
   width: 10%;
 }
 
+#title{
+    height: auto;
+    align-items: right;
+    justify-content: right;
+    border-left: 0.5vh solid #feca05;
+}
+
 button {
   background-color: transparent;
   border-color: rgba(254, 202, 5, 1);
@@ -322,4 +332,5 @@ h1,
 .nome-item {
   color: white;
 }
+
 </style>
