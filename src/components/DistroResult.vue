@@ -76,7 +76,7 @@ export default {
  
           x: {
             drawBorder: false,
-            grid:{
+            npmgrid:{
               display: false,
             },
             ticks:{

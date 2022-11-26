@@ -61,16 +61,16 @@ export default {
               {{ distro.name }}
             </h2>
           </div>
-          <p class="hits-item">
-            <strong>Based on:</strong> {{ distro.based_ons }}
+          <p class="hits-item" >
+            <strong>Based on:</strong> <a v-for="base_on in distro.based_ons"> {{ base_on }}</a>
           </p>
           <p class="hits-item">
-            <strong>Desktop:</strong> {{ distro.desktop_environments }}
+            <strong>Desktop:</strong> <a v-for="desktop in distro.desktop_environments">{{ desktop }}</a>
           </p>
           <p class="hits-item">
-            <strong>Popularity:</strong> {{ distro.popularity }}
+            <strong>Popularity:</strong> <a v-for="popularity in distro.popularity">{{ popularity }}</a>
           </p>
-          <p class="hits-item"><strong>About: </strong>{{ distro.about }}</p>
+          <p class="hits-item"><strong>About: </strong> <a v-for="about in  distro.about"> {{ about }}</a></p>
         </div>
       </div>
     </li>

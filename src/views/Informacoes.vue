@@ -7,13 +7,13 @@
     </div>
     <div class="conteiner-center">
       <div class="text-info">
-        <p><span class="negrito">Baseada em:</span>{{ distro.based_ons }}</p>
-        <p><span class="negrito">Arquitetura:</span></p>
+        <p><span class="negrito">Baseada em: </span><a v-for="based_ons in distro.based_ons"> {{ based_ons }}</a></p>
         <p>
-          <span class="negrito">Ambiente Desktop:</span>
-          {{ distro.desktop_environments }}
+          <span class="negrito">Ambiente Desktop: </span>
+          <a v-for="desktop in distro.desktop_environments"> {{ desktop }}; 
+          </a>
         </p>
-        <p><span class="negrito">Popularidade:</span>{{ distro.popularity }}</p>
+        <p><span class="negrito">Popularidade: </span>{{ distro.popularity }}</p>
         <br />
       </div>
       <div class="img">
